@@ -1,6 +1,6 @@
+import './Layout.scss'
 import React, { ReactNode } from 'react'
-import { Header } from './header'
-import './layout.scss'
+import { Header } from './Header'
 
 type Props = {
   children: ReactNode

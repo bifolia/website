@@ -1,9 +1,27 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "bifolia",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Raumgestaltung - Pflanzplanung - Gartenentwicklung",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jonas Hübotter <jonas.huebotter@gmail.com>",
+  "homepage": "https://bifolia.de",
+  "license": "MIT",
+  "engines": {
+    "node": "15.13.0"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "gh-pages -d build",
+    "prettier": "prettier --write .",
+    "prettierlint": "prettier --check .",
+    "eslint": "eslint src --ext .ts,.tsx",
+    "stylelint": "stylelint 'src/**/*.scss'",
+    "lint": "yarn prettierlint && yarn eslint && yarn stylelint",
+    "fix": "yarn prettier && yarn eslint --fix && yarn stylelint --fix"
+  },
   "dependencies": {
     "@types/react-helmet": "^6.1.0",
     "gatsby": "^3.2.1",
@@ -23,26 +41,17 @@
     "typescript": "^4.2.3"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.1",
+    "gh-pages": "^3.1.0",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0"
   }
 }
