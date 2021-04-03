@@ -1,0 +1,23 @@
+/* Colors */
+$background: #f1f3f6;
+$color: #0d0d0d;
+
+/* Sizes */
+$gap: 2em;
+
+/* Transitions */
+$transition-duration: 0.2s;
+
+/* z-index */
+$z-behind: -1;
+$z-base: 0;
+$z-overlay: 1;
+$z-loading: 2;
+$z-notification: 3;
+
+/* Breakpoints */
+$br-phone: 600px;
+$br-phablet: 800px;
+$br-tablet: 1200px;
+$br-laptop: 1600px;
+$br-desktop: 2000px;
