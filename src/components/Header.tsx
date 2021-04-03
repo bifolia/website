@@ -1,9 +1,7 @@
-import React from 'react'
 import { Link } from 'gatsby'
+import React from 'react'
 
-type Props = {}
-
-export const Header = ({}: Props) => (
+export const Header = () => (
   <header
     style={{
       background: `rebeccapurple`,
