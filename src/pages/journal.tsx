@@ -2,10 +2,10 @@ import { Layout } from '../components/Layout'
 import React from 'react'
 import { SEO } from '../components/SEO'
 
-const Gartenentwicklung = () => (
+const Journal = () => (
   <Layout>
-    <SEO title="Gartenentwicklung" description="" />
+    <SEO title="Journal" description="" />
   </Layout>
 )
 
-export default Gartenentwicklung
+export default Journal
