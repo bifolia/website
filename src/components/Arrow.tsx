@@ -6,6 +6,7 @@ export const Arrow = () => (
     height="24"
     width="24"
     viewBox="0 0 24 24"
+    className="Arrow"
   >
     <title>arrow right</title>
     <g

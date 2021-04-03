@@ -3,9 +3,8 @@ import React from 'react'
 export const Logo = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="103"
-    height="46"
     viewBox="0 0 1378.512 379.739"
+    className="Logo"
   >
     <path
       id="Path_4"
