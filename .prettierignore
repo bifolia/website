@@ -1,4 +1,10 @@
+*.html
+*.json
+*.md
+*.scss
+*.svg
+*.yml
+
 .cache
-package.json
-package-lock.json
 public
+node_modules
