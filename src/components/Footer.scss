@@ -1,13 +1,23 @@
+@import '../mixins.scss';
 @import '../variables.scss';
 
 .Footer {
+  @include grid;
+
   background: $color;
   color: $background;
   display: grid;
   grid-gap: $gap;
-  grid-template-areas: "copyright . address contact";
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "address" "contact" "copyright";
   padding: 3em $spacing;
+
+  @media screen and (min-width: $br-phone) {
+    grid-template-areas: "address contact" "copyright .";
+  }
+
+  @media screen and (min-width: $br-tablet) {
+    grid-template-areas: "copyright . address contact";
+  }
 
   a {
     color: $background;

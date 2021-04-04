@@ -2,6 +2,11 @@
 
 .Layout {
   main {
-    margin: $spacing;
+    padding: $spacing;
+    padding-top: 8em;
+
+    @media screen and (min-width: $br-phone) {
+      padding-top: 15em;
+    }
   }
 }
