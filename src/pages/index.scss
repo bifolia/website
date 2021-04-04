@@ -112,10 +112,10 @@ h1 {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  font-size: 2.25rem;
+  font-size: 2.25em;
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -153,7 +153,7 @@ sup {
 
 img {
   border-style: none;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -177,7 +177,7 @@ samp {
 }
 
 figure {
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -192,7 +192,7 @@ hr {
   border: none;
   box-sizing: content-box;
   height: 1px;
-  margin-bottom: calc(1.45rem - 1px);
+  margin-bottom: calc(1em - 1px);
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -250,7 +250,7 @@ button:-moz-focusring {
 
 fieldset {
   border: 1px solid silver;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -334,10 +334,10 @@ h2 {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  font-size: 1.62671rem;
+  font-size: 1.62671em;
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -363,10 +363,10 @@ h3 {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  font-size: 1.38316rem;
+  font-size: 1.38316em;
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -392,10 +392,10 @@ h4 {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -421,10 +421,10 @@ h5 {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  font-size: 0.85028rem;
+  font-size: 0.85028em;
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -450,10 +450,10 @@ h6 {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  font-size: 0.78405rem;
+  font-size: 0.78405em;
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -465,7 +465,7 @@ h6 {
 }
 
 hgroup {
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -478,8 +478,8 @@ hgroup {
 ul {
   list-style-image: none;
   list-style-position: outside;
-  margin-bottom: 1.45rem;
-  margin-left: 1.45rem;
+  margin-bottom: 1em;
+  margin-left: 1em;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -491,8 +491,8 @@ ul {
 ol {
   list-style-image: none;
   list-style-position: outside;
-  margin-bottom: 1.45rem;
-  margin-left: 1.45rem;
+  margin-bottom: 1em;
+  margin-left: 1em;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -502,7 +502,7 @@ ol {
 }
 
 dl {
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -513,7 +513,7 @@ dl {
 }
 
 dd {
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -524,7 +524,7 @@ dd {
 }
 
 p {
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -537,22 +537,22 @@ p {
 pre {
   background: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-size: 0.85rem;
+  font-size: 0.85em;
   line-height: 1.42;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   overflow: auto;
-  padding: 1.45rem;
+  padding: 1em;
   word-wrap: normal;
 }
 
 table {
   border-collapse: collapse;
-  font-size: 1rem;
-  line-height: 1.45rem;
-  margin-bottom: 1.45rem;
+  font-size: 1em;
+  line-height: 1em;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -564,9 +564,9 @@ table {
 }
 
 blockquote {
-  margin-bottom: 1.45rem;
-  margin-left: 1.45rem;
-  margin-right: 1.45rem;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
   margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
@@ -575,7 +575,7 @@ blockquote {
 }
 
 form {
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -586,7 +586,7 @@ form {
 }
 
 noscript {
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -597,7 +597,7 @@ noscript {
 }
 
 iframe {
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -608,7 +608,7 @@ iframe {
 }
 
 address {
-  margin-bottom: 1.45rem;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -635,7 +635,7 @@ th {
 }
 
 li {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: calc(1em / 2);
 }
 
 ol li {
@@ -647,15 +647,15 @@ ul li {
 }
 
 li > ol {
-  margin-bottom: calc(1.45rem / 2);
-  margin-left: 1.45rem;
-  margin-top: calc(1.45rem / 2);
+  margin-bottom: calc(1em / 2);
+  margin-left: 1em;
+  margin-top: calc(1em / 2);
 }
 
 li > ul {
-  margin-bottom: calc(1.45rem / 2);
-  margin-left: 1.45rem;
-  margin-top: calc(1.45rem / 2);
+  margin-bottom: calc(1em / 2);
+  margin-left: 1em;
+  margin-top: calc(1em / 2);
 }
 
 blockquote *:last-child {
@@ -671,22 +671,22 @@ p *:last-child {
 }
 
 li > p {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: calc(1em / 2);
 }
 
 code {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
+  font-size: 0.85em;
+  line-height: 1em;
 }
 
 kbd {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
+  font-size: 0.85em;
+  line-height: 1em;
 }
 
 samp {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
+  font-size: 0.85em;
+  line-height: 1em;
 }
 
 abbr {
@@ -710,10 +710,10 @@ th {
   -ms-font-feature-settings: "tnum";
   -webkit-font-feature-settings: "tnum";
   font-feature-settings: "tnum";
-  padding-bottom: calc(0.725rem - 1px);
-  padding-left: 0.96667rem;
-  padding-right: 0.96667rem;
-  padding-top: 0.725rem;
+  padding-bottom: calc(0.725em - 1px);
+  padding-left: 0.96667em;
+  padding-right: 0.96667em;
+  padding-top: 0.725em;
   text-align: left;
 }
 

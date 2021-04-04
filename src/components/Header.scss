@@ -1,8 +1,11 @@
-header {
+@import '../variables.scss';
+
+.Header {
   display: flex;
   justify-content: space-between;
+  margin: $spacing;
 
   .Logo {
-    height: 2em;
+    height: 1.75em;
   }
 }

@@ -1,3 +1,4 @@
+*.graphql
 *.html
 *.json
 *.md

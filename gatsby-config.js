@@ -10,6 +10,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: 'https://api.bifolia.de',
+        contentTypes: [],
+        singleTypes: ['footer'],
+        queryLimit: 1000,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

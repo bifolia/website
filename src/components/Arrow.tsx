@@ -8,7 +8,6 @@ export const Arrow = () => (
     viewBox="0 0 24 24"
     className="Arrow"
   >
-    <title>arrow right</title>
     <g
       strokeLinecap="square"
       strokeWidth="2"

@@ -5,7 +5,7 @@ import { Menu } from './Menu'
 import React from 'react'
 
 export const Header = () => (
-  <header>
+  <header className="Header">
     <Link to="/">
       <Logo />
     </Link>
