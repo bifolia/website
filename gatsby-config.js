@@ -15,7 +15,7 @@ module.exports = {
       options: {
         apiURL: 'https://api.bifolia.de',
         contentTypes: [],
-        singleTypes: ['footer'],
+        singleTypes: ['footer', 'homepage'],
         queryLimit: 1000,
       },
     },

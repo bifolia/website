@@ -68,17 +68,18 @@ $breakpoint: $br-tablet;
       font-size: 1.5em;
       height: 0;
       line-height: 2.5;
-      margin-top: 2em;
       opacity: 0;
+      padding-top: 2em;
       position: absolute;
       right: 0;
       text-align: right;
       transition: height 0s, opacity $transition-duration ease-out;
+      visibility: hidden;
 
       @media screen and (min-width: $breakpoint) {
         font-size: 1em;
         line-height: 2;
-        margin: 0;
+        padding: 0;
       }
 
       &__expanded {
@@ -119,6 +120,7 @@ $breakpoint: $br-tablet;
     .Header__menu__wrapper {
       height: auto;
       opacity: 1;
+      visibility: visible;
     }
 
     .Header__menu__wrapper__expanded {

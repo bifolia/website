@@ -3,7 +3,7 @@
 
 .Footer {
   @include grid;
-  @include theme($background, $color);
+  @include theme($background, $footer-background);
 
   display: grid;
   grid-gap: $gap;

@@ -1,23 +1,55 @@
 import './index.scss'
+import { graphql, useStaticQuery } from 'gatsby'
+import { Body } from '../components/Body'
+import { Component } from '../types'
 import { Layout } from '../components/Layout'
 import React from 'react'
 import { SEO } from '../components/SEO'
-import { StaticImage } from 'gatsby-plugin-image'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="" description="" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      quality={95}
-      formats={['auto', 'webp', 'avif']}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-  </Layout>
-)
+const IndexPage = () => {
+  const {
+    strapiHomepage: { description, body },
+  } = useStaticQuery<{
+    strapiHomepage: {
+      description: string
+      body: Component[]
+    }
+  }>(graphql`
+    {
+      strapiHomepage {
+        description
+        body {
+          strapi_component
+          title
+          content
+          caption
+          url
+          layout {
+            layout
+          }
+          source {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 3840
+                  quality: 100
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Layout>
+      <SEO title="" description={description} />
+      <Body components={body} />
+    </Layout>
+  )
+}
 
 export default IndexPage
