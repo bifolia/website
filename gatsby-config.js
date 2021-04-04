@@ -33,6 +33,12 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-4KHE5WMGWF'],
+      },
+    },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-offline`,
   ],

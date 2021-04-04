@@ -66,13 +66,13 @@ export const Footer = () => {
         </p>
         {social && social.length > 0 && (
           <p>
-            {social.map(({ title, url }) => (
-              <>
+            {social.map(({ title, url }, i) => (
+              <span key={i}>
                 <a href={url} target="_blank" rel="noreferrer">
                   {title}
                 </a>
                 <br />
-              </>
+              </span>
             ))}
           </p>
         )}
