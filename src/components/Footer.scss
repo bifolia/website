@@ -3,9 +3,8 @@
 
 .Footer {
   @include grid;
+  @include theme($background, $color);
 
-  background: $color;
-  color: $background;
   display: grid;
   grid-gap: $gap;
   grid-template-areas: "address" "contact" "copyright";
@@ -17,10 +16,6 @@
 
   @media screen and (min-width: $br-tablet) {
     grid-template-areas: "copyright . address contact";
-  }
-
-  a {
-    color: $background;
   }
 
   &__copyright {

@@ -34,7 +34,11 @@ $breakpoint: $br-tablet;
     z-index: $z-overlay;
 
     .Logo {
-      height: 1.75em;
+      height: 1.5em;
+
+      @media screen and (min-width: $breakpoint) {
+        height: 1.75em;
+      }
     }
   }
 
@@ -47,12 +51,14 @@ $breakpoint: $br-tablet;
     &__toggle {
       .Arrow {
         height: 2em;
+        stroke-width: 1.5;
         transform: none;
         transition: transform $transition-duration ease-in-out;
         width: 2em;
 
         @media screen and (min-width: $breakpoint) {
           height: 1em;
+          stroke-width: 2;
           width: 1em;
         }
       }

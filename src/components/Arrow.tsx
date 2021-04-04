@@ -10,7 +10,6 @@ export const Arrow = () => (
   >
     <g
       strokeLinecap="square"
-      strokeWidth="2"
       fill="none"
       stroke="#0D0D0D"
       strokeLinejoin="miter"

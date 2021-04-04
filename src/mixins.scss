@@ -3,6 +3,15 @@
   font-weight: 500;
 }
 
+@mixin theme($color, $background) {
+  background: $background;
+  color: $color;
+
+  a {
+    color: $color;
+  }
+}
+
 @mixin grid {
   grid-template-columns: 1fr;
 
