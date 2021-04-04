@@ -1,0 +1,30 @@
+@import '../variables.scss';
+
+.Footer {
+  background: $color;
+  color: $background;
+  display: grid;
+  grid-gap: $gap;
+  grid-template-areas: "copyright . address contact";
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3em $spacing;
+
+  a {
+    color: $background;
+  }
+
+  &__copyright {
+    align-self: end;
+    color: rgba($background, 0.25);
+    grid-area: copyright;
+  }
+
+  &__address {
+    grid-area: address;
+  }
+
+  &__contact {
+    grid-area: contact;
+    margin-bottom: 3em;
+  }
+}

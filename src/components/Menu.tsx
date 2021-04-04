@@ -19,22 +19,34 @@ export const Menu = () => {
       <div className="Menu__backdrop"></div>
 
       <div className="Menu__wrapper" ref={ref}>
-        <Link to="/raumgestaltung">Raumgestaltung</Link>
+        <Link to="/raumgestaltung" onClick={collapse}>
+          Raumgestaltung
+        </Link>
         <br />
-        <Link to="/pflanzplanung">Pflanzplanung</Link>
+        <Link to="/pflanzplanung" onClick={collapse}>
+          Pflanzplanung
+        </Link>
         <br />
-        <Link to="/gartenentwicklung">Gartenentwicklung</Link>
+        <Link to="/gartenentwicklung" onClick={collapse}>
+          Gartenentwicklung
+        </Link>
         <br />
 
         <span className="Menu__wrapper__collapsed link" onClick={expand}>
           <Arrow />
         </span>
         <div className="Menu__wrapper__expanded">
-          <Link to="/projekte">Projekte</Link>
+          <Link to="/projekte" onClick={collapse}>
+            Projekte
+          </Link>
           <br />
-          <Link to="/journal">Journal</Link>
+          <Link to="/journal" onClick={collapse}>
+            Journal
+          </Link>
           <br />
-          <Link to="/team">Team</Link>
+          <Link to="/team" onClick={collapse}>
+            Team
+          </Link>
           <br />
         </div>
       </div>
