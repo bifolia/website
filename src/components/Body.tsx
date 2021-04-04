@@ -19,7 +19,7 @@ export const Body = ({ components }: Props) => (
         {component.strapi_component === ComponentKind.Image ? (
           <ImageComponent image={component} />
         ) : component.strapi_component === ComponentKind.Table ? (
-          <TableComponent table={component} />
+          <TableComponent />
         ) : component.strapi_component === ComponentKind.Text ? (
           <TextComponent text={component} />
         ) : null}
