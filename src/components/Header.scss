@@ -68,8 +68,8 @@ $breakpoint: $br-tablet;
       font-size: 1.5em;
       height: 0;
       line-height: 2.5;
-      margin-top: 2em;
       opacity: 0;
+      padding-top: 2em;
       position: absolute;
       right: 0;
       text-align: right;
@@ -78,7 +78,7 @@ $breakpoint: $br-tablet;
       @media screen and (min-width: $breakpoint) {
         font-size: 1em;
         line-height: 2;
-        margin: 0;
+        padding: 0;
       }
 
       &__expanded {

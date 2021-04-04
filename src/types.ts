@@ -1,0 +1,52 @@
+import { FileNode } from 'gatsby-plugin-image/dist/src/components/hooks'
+
+export enum LayoutKind {
+  Full = 'full',
+  Left = 'left',
+  Right = 'right',
+}
+
+export enum ComponentKind {
+  Image = 'base.image',
+  Table = 'base.table',
+  Text = 'base.text',
+}
+
+type Layout = {
+  layout: LayoutKind
+}
+
+export type Image = {
+  strapi_component: ComponentKind.Image
+  source: {
+    localFile: FileNode
+  }
+  caption: string | null
+  url: string | null
+  layout: Layout
+}
+
+type TableValue = {
+  value: string
+}
+
+type TableEntry = {
+  name: string
+  values: TableValue[]
+}
+
+export type Table = {
+  strapi_component: ComponentKind.Table
+  entries: TableEntry[]
+  layout: Layout
+}
+
+export type Text = {
+  strapi_component: ComponentKind.Text
+  title: string | null
+  content: string
+  is_large: boolean
+  layout: Layout
+}
+
+export type Component = Image | Table | Text

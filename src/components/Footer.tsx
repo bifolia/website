@@ -57,7 +57,7 @@ export const Footer = () => {
         </p>
       </div>
       <div className="Footer__contact">
-        <h4>Kontaktieren Sie uns</h4>
+        <h4>Kontakt</h4>
         <p>
           {tel}
           <br />
@@ -66,13 +66,13 @@ export const Footer = () => {
         </p>
         {social && social.length > 0 && (
           <p>
-            {social.map(({ title, url }, i) => (
-              <span key={i}>
+            {social.map(({ title, url }) => (
+              <>
                 <a href={url} target="_blank" rel="noreferrer">
                   {title}
                 </a>
                 <br />
-              </span>
+              </>
             ))}
           </p>
         )}
