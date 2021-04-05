@@ -4,10 +4,11 @@
 $breakpoint: $br-tablet;
 
 .Header {
+  @include padding;
+
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: $spacing;
   position: fixed;
   width: 100%;
   z-index: $z-overlay;

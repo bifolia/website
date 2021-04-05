@@ -1,9 +1,11 @@
+@import '../mixins.scss';
 @import '../variables.scss';
 
 .Layout {
   main {
-    padding: $spacing;
-    padding-top: 8em;
+    @include padding;
+
+    padding-top: 7em;
 
     @media screen and (min-width: $br-tablet) {
       padding-top: 15em;
