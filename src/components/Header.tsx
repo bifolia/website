@@ -17,7 +17,7 @@ export const Header = () => {
     setExpanded,
   ])
 
-  const [peek, setPeek] = useState(true)
+  const [peek, setPeek] = useState(window.scrollY <= PEEK_THRESHOLD)
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY <= PEEK_THRESHOLD) setPeek(true)
