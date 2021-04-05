@@ -7,9 +7,9 @@
   text-align: right;
 
   &__caption {
-    margin-top: -1em;
     color: lighten($color, 40);
-    padding-top: 0.5em;
+    margin-top: -1em;
+    padding-top: 0.25em;
     transition: color $transition-duration ease-out;
   }
 
