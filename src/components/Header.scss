@@ -31,8 +31,14 @@ $breakpoint: $br-tablet;
   }
 
   &__logo {
+    margin-top: 0;
     position: relative;
+    transition: margin-top $transition-duration ease-in-out;
     z-index: $z-overlay;
+
+    &.pad {
+      margin-top: 1.5em;
+    }
 
     .Logo {
       height: 1.5em;
