@@ -39,7 +39,7 @@ export const Footer = () => {
   return (
     <footer className="Footer">
       <div className="Footer__copyright">
-        © bifolia {new Date().getFullYear()}
+        © bifolia GbR {new Date().getFullYear()}
       </div>
       <div className="Footer__address">
         <h4>bifolia</h4>

@@ -1,0 +1,19 @@
+@import '../mixins.scss';
+
+.Body {
+  @include grid;
+
+  &__component {
+    &.full {
+      @include layout-full;
+    }
+
+    &.left {
+      @include layout-left;
+    }
+
+    &.right {
+      @include layout-right;
+    }
+  }
+}
