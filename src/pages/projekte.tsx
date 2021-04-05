@@ -1,5 +1,5 @@
 import './projekte.scss'
-import { Entries, ProjectPeek } from '../types'
+import { Entries, Page, ProjectPeek } from '../types'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Layout } from '../components/Layout'
 import { ProjectPeekComponent } from '../components/ProjectPeekComponent'
@@ -45,7 +45,7 @@ const Projekte = () => {
   `)
 
   return (
-    <Layout>
+    <Layout page={Page.Projekte}>
       <SEO title="Projekte" description={description} />
       <h1 className="Projekte__title">Projekte</h1>
       <div className="Projekte__wrapper">

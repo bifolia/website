@@ -17,13 +17,10 @@
 
   a {
     opacity: 1 !important;
-    transition: text-decoration-color $transition-duration ease-out;
 
     &:active,
     &:focus,
     &:hover {
-      text-decoration-color: lighten($color, 40);
-
       .ImageComponent__caption {
         color: lighten($color, 40);
       }

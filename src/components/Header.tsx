@@ -3,13 +3,18 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Arrow } from './Arrow'
 import { Link } from 'gatsby'
 import { Logo } from './Logo'
+import { Page } from '../types'
 import classNames from 'classnames'
 import useOnClickOutside from 'use-onclickoutside'
 
 const BREAKPOINT = 1000
 const PEEK_THRESHOLD = 50
 
-export const Header = () => {
+type Props = {
+  page?: Page
+}
+
+export const Header = ({ page }: Props) => {
   const [expanded, setExpanded] = useState(false)
 
   const collapse = useCallback(() => setExpanded(false), [setExpanded])
@@ -56,29 +61,53 @@ export const Header = () => {
         </span>
 
         <div className="Header__menu__wrapper">
-          <Link to="/raumgestaltung" onClick={collapse}>
+          <Link
+            to="/raumgestaltung"
+            className={classNames({ active: page === Page.Raumgestaltung })}
+            onClick={collapse}
+          >
             Raumgestaltung
           </Link>
           <br />
-          <Link to="/pflanzplanung" onClick={collapse}>
+          <Link
+            to="/pflanzplanung"
+            className={classNames({ active: page === Page.Pflanzplanung })}
+            onClick={collapse}
+          >
             Pflanzplanung
           </Link>
           <br />
-          <Link to="/gartenentwicklung" onClick={collapse}>
+          <Link
+            to="/gartenentwicklung"
+            className={classNames({ active: page === Page.Gartenentwicklung })}
+            onClick={collapse}
+          >
             Gartenentwicklung
           </Link>
           <br />
 
           <div className="Header__menu__wrapper__expanded">
-            <Link to="/wir" onClick={collapse}>
+            <Link
+              to="/wir"
+              className={classNames({ active: page === Page.Wir })}
+              onClick={collapse}
+            >
               Wir
             </Link>
             <br />
-            <Link to="/projekte" onClick={collapse}>
+            <Link
+              to="/projekte"
+              className={classNames({ active: page === Page.Projekte })}
+              onClick={collapse}
+            >
               Projekte
             </Link>
             <br />
-            <Link to="/journal" onClick={collapse}>
+            <Link
+              to="/journal"
+              className={classNames({ active: page === Page.Journal })}
+              onClick={collapse}
+            >
               Journal
             </Link>
             <br />

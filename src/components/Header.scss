@@ -51,6 +51,14 @@ $breakpoint: $br-tablet;
     position: relative;
     z-index: $z-overlay;
 
+    a {
+      &.active {
+        text-decoration: underline;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.15em;
+      }
+    }
+
     &__toggle {
       .Arrow {
         height: 2em;

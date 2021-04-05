@@ -1,6 +1,6 @@
+import { Component, Page } from '../types'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Body } from '../components/Body'
-import { Component } from '../types'
 import { Layout } from '../components/Layout'
 import React from 'react'
 import { SEO } from '../components/SEO'
@@ -44,7 +44,7 @@ const Pflanzplanung = () => {
   `)
 
   return (
-    <Layout>
+    <Layout page={Page.Pflanzplanung}>
       <SEO title="" description={description} />
       <Body components={body} />
     </Layout>
