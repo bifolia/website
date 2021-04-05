@@ -15,7 +15,14 @@ module.exports = {
       options: {
         apiURL: 'https://api.bifolia.de',
         contentTypes: [],
-        singleTypes: ['footer', 'homepage'],
+        singleTypes: [
+          'footer',
+          'gartenentwicklung',
+          'homepage',
+          'pflanzplanung',
+          'raumgestaltung',
+          'team',
+        ],
         queryLimit: 1000,
       },
     },
