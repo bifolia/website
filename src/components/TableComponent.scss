@@ -1,0 +1,18 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.TableComponent {
+  @include link;
+
+  &__row {
+    border-bottom: 0.05em solid $color;
+    display: grid;
+    grid-gap: $gap;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.25em 0;
+
+    &__name {
+      @include sans-serif;
+    }
+  }
+}
