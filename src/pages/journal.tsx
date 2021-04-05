@@ -64,7 +64,7 @@ const Journal = () => {
 
   return (
     <Layout page={Page.Journal} className="Journal">
-      <SEO title="" description={description} />
+      <SEO title="Journal" description={description} />
       {entries.edges.map(({ node }, i) => (
         <JournalEntryComponent entry={node} key={i} />
       ))}

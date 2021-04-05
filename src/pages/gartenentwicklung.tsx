@@ -45,7 +45,7 @@ const Gartenentwicklung = () => {
 
   return (
     <Layout page={Page.Gartenentwicklung}>
-      <SEO title="" description={description} />
+      <SEO title="Gartenentwicklung" description={description} />
       <Body components={body} />
     </Layout>
   )

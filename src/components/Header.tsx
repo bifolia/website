@@ -38,7 +38,7 @@ export const Header = ({ page }: Props) => {
   }, [setPeek])
 
   const padLogo = useMemo(
-    () => expanded || (peek && window.innerWidth >= BREAKPOINT),
+    () => (expanded || peek) && window.innerWidth >= BREAKPOINT,
     [expanded, peek],
   )
 

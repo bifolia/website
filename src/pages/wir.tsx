@@ -45,7 +45,7 @@ const Wir = () => {
 
   return (
     <Layout page={Page.Wir}>
-      <SEO title="" description={description} />
+      <SEO title="Wir" description={description} />
       <Body components={body} />
     </Layout>
   )

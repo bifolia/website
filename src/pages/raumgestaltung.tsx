@@ -45,7 +45,7 @@ const Raumgestaltung = () => {
 
   return (
     <Layout page={Page.Raumgestaltung}>
-      <SEO title="" description={description} />
+      <SEO title="Raumgestaltung" description={description} />
       <Body components={body} />
     </Layout>
   )

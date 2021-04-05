@@ -45,7 +45,7 @@ const Pflanzplanung = () => {
 
   return (
     <Layout page={Page.Pflanzplanung}>
-      <SEO title="" description={description} />
+      <SEO title="Pflanzplanung" description={description} />
       <Body components={body} />
     </Layout>
   )
