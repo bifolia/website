@@ -1,3 +1,5 @@
+const path = require('path')
+
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
@@ -29,6 +31,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       url: String
     }
 
+    type StrapiProjectBody {
+      caption: String
+      url: String
+    }
+
     type StrapiRaumgestaltungBody {
       caption: String
       url: String
@@ -46,4 +53,57 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `
   createTypes(typeDefs)
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    query {
+      allStrapiProject {
+        edges {
+          node {
+            description
+            name
+            body {
+              strapi_component
+              layout {
+                layout
+              }
+              content
+              is_large
+              caption
+              url
+              entries {
+                name
+                values {
+                  value
+                }
+              }
+              source {
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData(
+                      width: 3840
+                      quality: 100
+                      placeholder: BLURRED
+                      formats: [AUTO, WEBP, AVIF]
+                    )
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  result.data.allStrapiProject.edges.forEach(({ node }) => {
+    createPage({
+      path: `projekte/${node.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`,
+      component: path.resolve(`./src/templates/projekt.tsx`),
+      context: {
+        project: node,
+      },
+    })
+  })
 }

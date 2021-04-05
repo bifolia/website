@@ -1,6 +1,6 @@
 import './journal.scss'
+import { Entries, JournalEntry } from '../types'
 import { graphql, useStaticQuery } from 'gatsby'
-import { JournalEntries } from '../types'
 import { JournalEntryComponent } from '../components/JournalEntryComponent'
 import { Layout } from '../components/Layout'
 import React from 'react'
@@ -14,7 +14,7 @@ const Journal = () => {
     strapiJournal: {
       description: string
     }
-    allStrapiText: JournalEntries
+    allStrapiText: Entries<JournalEntry>
   }>(graphql`
     {
       strapiJournal {

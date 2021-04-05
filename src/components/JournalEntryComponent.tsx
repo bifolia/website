@@ -16,13 +16,9 @@ export const JournalEntryComponent = ({
     <div className="JournalEntryComponent">
       <h1 className="JournalEntryComponent__title">{title}</h1>
       <p className="JournalEntryComponent__meta">
-        {from && (
-          <>
-            von {from}
-            <br />
-          </>
-        )}
         {date}
+        <br />
+        {from && `von ${from}`}
       </p>
       <Body components={body} />
     </div>

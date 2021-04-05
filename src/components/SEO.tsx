@@ -13,7 +13,7 @@ export const SEO = ({ description, meta = [], title }: Props) => {
   return (
     <Helmet
       htmlAttributes={{ lang: LANG }}
-      title={title ? `${title} - bifolia` : 'bifolia'}
+      title={title ? `${title} | bifolia` : 'bifolia'}
       meta={meta.concat([
         {
           name: `description`,

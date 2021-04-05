@@ -78,10 +78,6 @@
 
 @mixin padding {
   padding: $gap;
-
-  @media screen and (min-width: $br-tablet) {
-    padding: $spacing;
-  }
 }
 
 @mixin link {

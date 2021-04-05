@@ -58,6 +58,21 @@ export type JournalEntry = {
   body: Component[]
 }
 
-export type JournalEntries = {
-  edges: { node: JournalEntry }[]
+export type Entries<T> = {
+  edges: { node: T }[]
+}
+
+export type Project = {
+  description: string
+  name: string
+  body: Component[]
+}
+
+export type ProjectPeek = {
+  name: string
+  cover: {
+    localFile: FileNode
+  }
+  place: string
+  year: string
 }
