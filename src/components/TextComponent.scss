@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+.TextComponent {
+  column-count: 1;
+  column-gap: $gap;
+
+  @media screen and (min-width: $br-phone) {
+    column-count: 2;
+  }
+
+  &.large {
+    column-count: 1;
+    font-size: 1.25em;
+  }
+}
