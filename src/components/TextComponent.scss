@@ -1,6 +1,9 @@
+@import '../mixins.scss';
 @import '../variables.scss';
 
 .TextComponent {
+  @include link;
+
   column-count: 1;
   column-gap: $gap;
   font-size: 0.8em;

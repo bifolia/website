@@ -20,12 +20,18 @@ const IndexPage = () => {
         description
         body {
           strapi_component
+          layout {
+            layout
+          }
           content
           is_large
           caption
           url
-          layout {
-            layout
+          entries {
+            name
+            values {
+              value
+            }
           }
           source {
             localFile {
