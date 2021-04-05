@@ -1,12 +1,15 @@
+import './404.scss'
 import { Layout } from '../components/Layout'
 import React from 'react'
 import { SEO } from '../components/SEO'
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" description="" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <SEO title="" description="" />
+    <div className="NotFound__wrapper">
+      <h1>404</h1>
+      <p>Diese Seite existiert leider nicht.</p>
+    </div>
   </Layout>
 )
 
