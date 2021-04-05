@@ -15,5 +15,9 @@
     &.right {
       @include layout-right;
     }
+
+    &.center {
+      @include layout-center;
+    }
   }
 }

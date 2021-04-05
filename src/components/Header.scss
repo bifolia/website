@@ -36,10 +36,6 @@ $breakpoint: $br-tablet;
 
     .Logo {
       height: 1.5em;
-
-      @media screen and (min-width: $breakpoint) {
-        height: 1.75em;
-      }
     }
   }
 

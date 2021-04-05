@@ -27,12 +27,6 @@ const IndexPage = () => {
           is_large
           caption
           url
-          entries {
-            name
-            values {
-              value
-            }
-          }
           source {
             localFile {
               childImageSharp {

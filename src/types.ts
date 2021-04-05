@@ -4,6 +4,7 @@ export enum LayoutKind {
   Full = 'full',
   Left = 'left',
   Right = 'right',
+  Center = 'center',
 }
 
 export enum ComponentKind {
@@ -49,3 +50,14 @@ export type Text = {
 }
 
 export type Component = Image | Table | Text
+
+export type JournalEntry = {
+  title: string
+  date: string
+  authors: { name: string }[] | null
+  body: Component[]
+}
+
+export type JournalEntries = {
+  edges: { node: JournalEntry }[]
+}
