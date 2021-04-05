@@ -74,12 +74,12 @@ $breakpoint: $br-tablet;
       right: 0;
       text-align: right;
       transition: visibility 0s, opacity $transition-duration ease-out;
+      visibility: hidden;
 
       @media screen and (min-width: $breakpoint) {
         font-size: 1em;
         line-height: 2;
         padding: 0;
-        visibility: hidden;
       }
 
       &__expanded {

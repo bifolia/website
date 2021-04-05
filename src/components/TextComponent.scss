@@ -6,10 +6,19 @@
 
   @media screen and (min-width: $br-phone) {
     column-count: 2;
+    margin: 1em 0;
+  }
+
+  @media screen and (min-width: $br-tablet) {
+    margin: 2em 0;
+  }
+
+  @media screen and (min-width: $br-laptop) {
+    margin: 4em 0;
   }
 
   &.large {
     column-count: 1;
-    font-size: 1.25em;
+    font-size: 1.3em;
   }
 }
