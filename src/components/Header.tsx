@@ -1,11 +1,12 @@
 import './Header.scss'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Arrow } from './Arrow'
 import { Link } from 'gatsby'
 import { Logo } from './Logo'
 import classNames from 'classnames'
 import useOnClickOutside from 'use-onclickoutside'
 
+const BREAKPOINT = 1000
 const PEEK_THRESHOLD = 50
 
 export const Header = () => {
@@ -31,6 +32,11 @@ export const Header = () => {
     }
   }, [setPeek])
 
+  const padLogo = useMemo(
+    () => expanded || (peek && window.innerWidth >= BREAKPOINT),
+    [expanded, peek],
+  )
+
   const ref = useRef(null)
   useOnClickOutside(ref, collapse)
 
@@ -38,7 +44,7 @@ export const Header = () => {
     <header className={classNames('Header', { expanded, peek })}>
       <div className="Header__backdrop"></div>
 
-      <div className="Header__logo">
+      <div className={classNames('Header__logo', { pad: padLogo })}>
         <Link to="/">
           <Logo />
         </Link>
