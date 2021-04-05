@@ -2,10 +2,10 @@ import { Layout } from '../components/Layout'
 import React from 'react'
 import { SEO } from '../components/SEO'
 
-const Team = () => (
+const Wir = () => (
   <Layout>
-    <SEO title="Team" description="" />
+    <SEO title="Wir" description="" />
   </Layout>
 )
 
-export default Team
+export default Wir

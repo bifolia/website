@@ -63,16 +63,16 @@ export const Header = () => {
           <br />
 
           <div className="Header__menu__wrapper__expanded">
+            <Link to="/wir" onClick={collapse}>
+              Wir
+            </Link>
+            <br />
             <Link to="/projekte" onClick={collapse}>
               Projekte
             </Link>
             <br />
             <Link to="/journal" onClick={collapse}>
               Journal
-            </Link>
-            <br />
-            <Link to="/team" onClick={collapse}>
-              Team
             </Link>
             <br />
           </div>
