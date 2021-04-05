@@ -1,5 +1,14 @@
 import { FileNode } from 'gatsby-plugin-image/dist/src/components/hooks'
 
+export enum Page {
+  Raumgestaltung,
+  Pflanzplanung,
+  Gartenentwicklung,
+  Wir,
+  Projekte,
+  Journal,
+}
+
 export enum LayoutKind {
   Full = 'full',
   Left = 'left',

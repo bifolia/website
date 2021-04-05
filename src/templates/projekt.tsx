@@ -1,9 +1,9 @@
 import './projekt.scss'
+import { Page, Project } from '../types'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
 import { Layout } from '../components/Layout'
 import { PageProps } from 'gatsby'
-import { Project } from '../types'
 import { SEO } from '../components/SEO'
 
 type Context = {
@@ -15,7 +15,7 @@ const Projekt: FunctionComponent<PageProps<unknown, Context>> = ({
     project: { description, name, body },
   },
 }) => (
-  <Layout>
+  <Layout page={Page.Projekte}>
     <SEO title={name} description={description} />
     <h1 className="Projekt__name">{name}</h1>
     <Body components={body} />

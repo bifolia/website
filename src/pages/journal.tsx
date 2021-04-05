@@ -1,5 +1,5 @@
 import './journal.scss'
-import { Entries, JournalEntry } from '../types'
+import { Entries, JournalEntry, Page } from '../types'
 import { graphql, useStaticQuery } from 'gatsby'
 import { JournalEntryComponent } from '../components/JournalEntryComponent'
 import { Layout } from '../components/Layout'
@@ -63,7 +63,7 @@ const Journal = () => {
   `)
 
   return (
-    <Layout className="Journal">
+    <Layout page={Page.Journal} className="Journal">
       <SEO title="" description={description} />
       {entries.edges.map(({ node }, i) => (
         <JournalEntryComponent entry={node} key={i} />
