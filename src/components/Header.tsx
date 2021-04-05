@@ -1,5 +1,5 @@
 import './Header.scss'
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Arrow } from './Arrow'
 import { Link } from 'gatsby'
 import { Logo } from './Logo'
@@ -25,10 +25,7 @@ export const Header = ({ page }: Props) => {
 
   const [peek, setPeek] = useState(true)
   useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY <= PEEK_THRESHOLD) setPeek(true)
-      else setPeek(false)
-    }
+    const onScroll = () => setPeek(window.scrollY <= PEEK_THRESHOLD)
 
     onScroll()
     window.addEventListener('scroll', onScroll)
@@ -37,10 +34,18 @@ export const Header = ({ page }: Props) => {
     }
   }, [setPeek])
 
-  const padLogo = useMemo(
-    () => (expanded || peek) && window.innerWidth >= BREAKPOINT,
-    [expanded, peek],
-  )
+  const [padLogo, setPadLogo] = useState(false)
+  useEffect(() => {
+    const onResize = () => {
+      setPadLogo(window.innerWidth >= BREAKPOINT && (expanded || peek))
+    }
+
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => {
+      window.removeEventListener('resize', onResize)
+    }
+  }, [expanded, peek, setPadLogo])
 
   const ref = useRef(null)
   useOnClickOutside(ref, collapse)
