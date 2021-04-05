@@ -2,9 +2,14 @@ import './Layout.scss'
 import React, { FunctionComponent } from 'react'
 import { Footer } from './Footer'
 import { Header } from './Header'
+import classNames from 'classnames'
 
-export const Layout: FunctionComponent = ({ children }) => (
-  <div className="Layout">
+type Props = {
+  className?: string
+}
+
+export const Layout: FunctionComponent<Props> = ({ className, children }) => (
+  <div className={classNames('Layout', className)}>
     <Header />
     <main>{children}</main>
     <Footer />

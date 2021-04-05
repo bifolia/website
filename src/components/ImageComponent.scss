@@ -7,9 +7,10 @@
   text-align: right;
 
   &__caption {
-    color: lighten($color, 40);
+    color: lighten($color, 20);
+    font-size: 0.8em;
     margin-top: -1em;
-    padding-top: 0.25em;
+    padding-top: 0.4em;
     transition: color $transition-duration ease-out;
   }
 
@@ -20,10 +21,10 @@
     &:active,
     &:focus,
     &:hover {
-      text-decoration-color: lighten($color, 60);
+      text-decoration-color: lighten($color, 40);
 
       .ImageComponent__caption {
-        color: lighten($color, 60);
+        color: lighten($color, 40);
       }
     }
   }

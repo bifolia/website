@@ -26,7 +26,7 @@ export const ImageComponent = ({
   return (
     <div className="ImageComponent">
       {url ? (
-        <a href={url} target="_blank" rel="noreferrer">
+        <a href={url}>
           {image}
           {captionElement}
         </a>

@@ -5,6 +5,15 @@ exports.createSchemaCustomization = ({ actions }) => {
       line_2: String
     }
 
+    type StrapiBaseTableEntry {
+      name: String!
+      values: [StrapiBaseTableValue]
+    }
+
+    type StrapiBaseTableValue {
+      value: String!
+    }
+
     type StrapiGartenentwicklungBody {
       caption: String
       url: String
@@ -28,6 +37,12 @@ exports.createSchemaCustomization = ({ actions }) => {
     type StrapiTeamBody {
       caption: String
       url: String
+    }
+
+    type StrapiTextBody {
+      caption: String
+      url: String
+      entries: [StrapiBaseTableEntry]
     }
   `
   createTypes(typeDefs)
