@@ -6,7 +6,6 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type StrapiHomepageBody {
-      title: String
       caption: String
       url: String
     }

@@ -20,8 +20,8 @@ const IndexPage = () => {
         description
         body {
           strapi_component
-          title
           content
+          is_large
           caption
           url
           layout {

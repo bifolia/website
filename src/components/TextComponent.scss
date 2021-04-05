@@ -3,22 +3,23 @@
 .TextComponent {
   column-count: 1;
   column-gap: $gap;
+  font-size: 0.8em;
 
   @media screen and (min-width: $br-phone) {
     column-count: 2;
-    margin: 1em 0;
+    margin: 0 0 1em;
   }
 
   @media screen and (min-width: $br-tablet) {
-    margin: 2em 0;
+    margin: 0 0 2em;
   }
 
   @media screen and (min-width: $br-laptop) {
-    margin: 4em 0;
+    margin: 1em 0 3em;
   }
 
   &.large {
     column-count: 1;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }

@@ -43,7 +43,6 @@ export type Table = {
 
 export type Text = {
   strapi_component: ComponentKind.Text
-  title: string | null
   content: string
   is_large: boolean
   layout: Layout
