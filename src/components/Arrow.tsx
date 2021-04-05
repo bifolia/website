@@ -24,7 +24,7 @@ export const Arrow = () => (
         y2="12"
         strokeLinecap="butt"
         stroke="#0D0D0D"
-      ></line>{' '}
+      ></line>
       <polyline points="15,5 22,12 15,19 "></polyline>
     </g>
   </svg>

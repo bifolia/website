@@ -1,0 +1,30 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.ImageComponent {
+  @include link;
+
+  text-align: right;
+
+  &__caption {
+    margin-top: -1em;
+    color: lighten($color, 40);
+    padding-top: 0.5em;
+    transition: color $transition-duration ease-out;
+  }
+
+  a {
+    opacity: 1 !important;
+    transition: text-decoration-color $transition-duration ease-out;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration-color: lighten($color, 60);
+
+      .ImageComponent__caption {
+        color: lighten($color, 60);
+      }
+    }
+  }
+}

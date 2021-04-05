@@ -71,3 +71,12 @@
     padding: $spacing;
   }
 }
+
+@mixin link {
+  a {
+    text-decoration: underline;
+    text-decoration-color: $color;
+    text-decoration-thickness: .05em;
+    text-underline-offset: 0.15em;
+  }
+}
