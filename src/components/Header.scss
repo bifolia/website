@@ -88,7 +88,7 @@ $breakpoint: $br-tablet;
 
   &.expanded {
     .Header__backdrop {
-      backdrop-filter: blur(1em);
+      backdrop-filter: blur(2em);
       background: rgba($background, 0.5);
       visibility: visible;
     }

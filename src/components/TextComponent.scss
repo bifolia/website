@@ -10,15 +10,15 @@
 
   @media screen and (min-width: $br-phone) {
     column-count: 2;
-    margin: 0 0 1em;
+    margin: 1em 0;
   }
 
   @media screen and (min-width: $br-tablet) {
-    margin: 0 0 2em;
+    margin: 2em 0;
   }
 
   @media screen and (min-width: $br-laptop) {
-    margin: 1em 0 3em;
+    margin: 3em 0;
   }
 
   &.large {

@@ -14,13 +14,14 @@ module.exports = {
       resolve: 'gatsby-source-strapi',
       options: {
         apiURL: 'https://api.bifolia.de',
-        contentTypes: ['text'],
+        contentTypes: ['project', 'text'],
         singleTypes: [
           'footer',
           'gartenentwicklung',
           'homepage',
           'journal',
           'pflanzplanung',
+          'projekte',
           'raumgestaltung',
           'team',
         ],

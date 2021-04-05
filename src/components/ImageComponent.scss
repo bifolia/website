@@ -4,6 +4,7 @@
 .ImageComponent {
   @include link;
 
+  line-height: 0;
   text-align: right;
 
   &__caption {

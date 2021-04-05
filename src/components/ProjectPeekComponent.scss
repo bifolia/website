@@ -1,0 +1,12 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.ProjectPeekComponent {
+  @include sans-serif;
+
+  font-size: 0.8em;
+
+  p {
+    margin: 0;
+  }
+}

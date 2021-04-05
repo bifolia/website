@@ -21,12 +21,12 @@
     }
   }
 
-  &__title,
-  &__meta {
-    text-align: center;
+  &__title {
+    margin: 0 0 0.1em;
   }
 
-  &__title {
-    margin: 0.35em 0;
+  &__meta {
+    margin-bottom: 6em;
+    text-align: center;
   }
 }
