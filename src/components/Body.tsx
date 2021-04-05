@@ -1,3 +1,4 @@
+import './Body.scss'
 import { Component, ComponentKind } from '../types'
 import { ImageComponent } from './ImageComponent'
 import React from 'react'

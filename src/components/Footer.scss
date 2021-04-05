@@ -6,8 +6,6 @@
   @include padding;
   @include theme($background, $footer-background);
 
-  display: grid;
-  grid-gap: $gap;
   grid-template-areas: "address" "contact" "copyright";
   padding-bottom: 3em;
   padding-top: 3em;
