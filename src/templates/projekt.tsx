@@ -15,7 +15,7 @@ const Projekt: FunctionComponent<PageProps<unknown, Context>> = ({
     project: { description, name, body },
   },
 }) => (
-  <Layout className="Projekt">
+  <Layout>
     <SEO title={name} description={description} />
     <h1 className="Projekt__name">{name}</h1>
     <Body components={body} />

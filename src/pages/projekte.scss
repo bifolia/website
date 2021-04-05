@@ -1,16 +1,15 @@
 @import '../mixins.scss';
 
 .Projekte {
-  main {
+  &__title {
+    margin: 1em 0 3em;
+  }
+
+  &__wrapper {
     @include grid;
 
     @media screen and (min-width: $br-tablet) {
       grid-template-columns: repeat(3, 1fr) !important;
     }
-  }
-
-  &__title {
-    grid-column: 1 / -1;
-    margin: 1em 0 3em;
   }
 }

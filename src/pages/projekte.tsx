@@ -45,12 +45,14 @@ const Projekte = () => {
   `)
 
   return (
-    <Layout className="Projekte">
+    <Layout>
       <SEO title="Projekte" description={description} />
       <h1 className="Projekte__title">Projekte</h1>
-      {entries.edges.map(({ node }, i) => (
-        <ProjectPeekComponent project={node} key={i} />
-      ))}
+      <div className="Projekte__wrapper">
+        {entries.edges.map(({ node }, i) => (
+          <ProjectPeekComponent project={node} key={i} />
+        ))}
+      </div>
     </Layout>
   )
 }
