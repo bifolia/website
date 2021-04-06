@@ -1,0 +1,35 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.AnalyticsConsent {
+  @include link;
+  @include sans-serif;
+  @include theme($background, $color);
+
+  bottom: -5em;
+  left: 0;
+  position: fixed;
+  transition: visibility 0s, bottom $transition-duration ease-out;
+  width: 100%;
+  z-index: $z-notification;
+
+  &.active {
+    bottom: 0;
+    visibility: visible;
+  }
+
+  &__action {
+    display: block;
+    margin-top: $gap;
+
+    @media screen and (min-width: $br-phone) {
+      display: inline-block;
+      float: right;
+      margin: 0;
+    }
+
+    span {
+      margin-right: $gap;
+    }
+  }
+}
