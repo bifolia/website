@@ -1,55 +1,57 @@
 import './index.scss'
-import { graphql, useStaticQuery } from 'gatsby'
+import { PageProps, graphql } from 'gatsby'
+import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
 import { Component } from '../types'
 import { Layout } from '../components/Layout'
-import React from 'react'
 import { SEO } from '../components/SEO'
 
-const IndexPage = () => {
-  const {
+type Data = {
+  strapiHomepage: {
+    description: string
+    body: Component[]
+  }
+}
+
+const IndexPage: FunctionComponent<PageProps<Data>> = ({
+  data: {
     strapiHomepage: { description, body },
-  } = useStaticQuery<{
-    strapiHomepage: {
-      description: string
-      body: Component[]
-    }
-  }>(graphql`
-    {
-      strapiHomepage {
-        description
-        body {
-          strapi_component
-          layout {
-            layout
-          }
-          content
-          is_large
-          caption
-          url
-          source {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 3840
-                  quality: 100
-                  placeholder: BLURRED
-                  formats: [AUTO, WEBP, AVIF]
-                )
-              }
+  },
+}) => (
+  <Layout>
+    <SEO title="" description={description} />
+    <Body components={body} />
+  </Layout>
+)
+
+export default IndexPage
+
+export const query = graphql`
+  {
+    strapiHomepage {
+      description
+      body {
+        strapi_component
+        layout {
+          layout
+        }
+        content
+        is_large
+        caption
+        url
+        source {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 3840
+                quality: 100
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
       }
     }
-  `)
-
-  return (
-    <Layout>
-      <SEO title="" description={description} />
-      <Body components={body} />
-    </Layout>
-  )
-}
-
-export default IndexPage
+  }
+`

@@ -1,26 +1,22 @@
 import { Component, ComponentKind, LayoutKind } from '../types'
-import { graphql, useStaticQuery } from 'gatsby'
+import { PageProps, graphql } from 'gatsby'
+import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
 import { Layout } from '../components/Layout'
-import React from 'react'
 import { SEO } from '../components/SEO'
 
-const Datenschutz = () => {
-  const {
+type Data = {
+  strapiDatenschutz: {
+    description: string
+    content: string
+  }
+}
+
+const Datenschutz: FunctionComponent<PageProps<Data>> = ({
+  data: {
     strapiDatenschutz: { description, content },
-  } = useStaticQuery<{
-    strapiDatenschutz: {
-      description: string
-      content: string
-    }
-  }>(graphql`
-    {
-      strapiDatenschutz {
-        description
-        content
-      }
-    }
-  `)
+  },
+}) => {
   const body: Component[] = [
     {
       strapi_component: ComponentKind.Text,
@@ -40,3 +36,12 @@ const Datenschutz = () => {
 }
 
 export default Datenschutz
+
+export const query = graphql`
+  {
+    strapiDatenschutz {
+      description
+      content
+    }
+  }
+`
