@@ -25,4 +25,10 @@
     column-count: 1;
     font-size: 1.2em;
   }
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

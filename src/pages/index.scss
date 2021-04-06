@@ -420,23 +420,10 @@ h4 {
 
 h5 {
   color: inherit;
-  font-family:
-    'Inter',
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
-  font-size: 0.85028em;
-  font-weight: 500;
-  line-height: 1.1;
-  margin-bottom: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.58;
+  margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -449,23 +436,10 @@ h5 {
 
 h6 {
   color: inherit;
-  font-family:
-    'Inter',
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
-  font-size: 0.78405em;
-  font-weight: 500;
-  line-height: 1.1;
-  margin-bottom: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.58;
+  margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -536,7 +510,7 @@ dd {
 }
 
 p {
-  margin-bottom: 0;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;

@@ -6,15 +6,16 @@
   @include sans-serif;
   @include theme($background, $color);
 
-  bottom: -5em;
+  bottom: 0;
   left: 0;
   position: fixed;
-  transition: visibility 0s, bottom $transition-duration ease-out;
+  transform: translateY(100%);
+  transition: visibility 0s, transform $transition-duration ease-out;
   width: 100%;
   z-index: $z-notification;
 
   &.active {
-    bottom: 0;
+    transform: none;
     visibility: visible;
   }
 

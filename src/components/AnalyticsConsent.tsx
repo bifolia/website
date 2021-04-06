@@ -1,6 +1,5 @@
 import './AnalyticsConsent.scss'
 import React, { useCallback, useState } from 'react'
-import { Link } from 'gatsby'
 import classNames from 'classnames'
 import { useCookies } from 'react-cookie'
 
@@ -26,7 +25,9 @@ export const AnalyticsConsent = () => {
         <span className="link" onClick={close}>
           Einverstanden
         </span>
-        <Link to="/datenschutz">Datenschutzerklärung</Link>
+        <a href="/datenschutz" target="_blank">
+          Datenschutzerklärung
+        </a>
       </span>
     </div>
   )

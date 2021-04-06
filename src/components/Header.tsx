@@ -34,7 +34,7 @@ export const Header = ({ page }: Props) => {
     }
   }, [setPeek])
 
-  const [padLogo, setPadLogo] = useState(false)
+  const [padLogo, setPadLogo] = useState(true)
   useEffect(() => {
     const onResize = () => {
       setPadLogo(window.innerWidth >= BREAKPOINT && (expanded || peek))

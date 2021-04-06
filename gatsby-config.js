@@ -16,6 +16,7 @@ module.exports = {
         apiURL: 'https://api.bifolia.de',
         contentTypes: ['project', 'text'],
         singleTypes: [
+          'datenschutz',
           'footer',
           'gartenentwicklung',
           'homepage',
