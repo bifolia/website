@@ -6,10 +6,10 @@
 
   column-count: 1;
   column-gap: $gap;
-  font-size: 0.8em;
 
   @media screen and (min-width: $br-phone) {
     column-count: 2;
+    font-size: 0.8em;
     margin: 1em 0;
   }
 
