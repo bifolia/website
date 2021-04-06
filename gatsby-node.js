@@ -62,47 +62,19 @@ exports.createPages = async ({ graphql, actions }) => {
       allStrapiProject {
         edges {
           node {
-            description
+            id
             name
-            body {
-              strapi_component
-              layout {
-                layout
-              }
-              content
-              is_large
-              caption
-              url
-              entries {
-                name
-                values {
-                  value
-                }
-              }
-              source {
-                localFile {
-                  childImageSharp {
-                    gatsbyImageData(
-                      width: 3840
-                      quality: 100
-                      placeholder: BLURRED
-                      formats: [AUTO, WEBP, AVIF]
-                    )
-                  }
-                }
-              }
-            }
           }
         }
       }
     }
   `)
-  result.data.allStrapiProject.edges.forEach(({ node }) => {
+  result.data.allStrapiProject.edges.forEach(({ node: { id, name } }) => {
     createPage({
-      path: `projekte/${node.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`,
+      path: `projekte/${name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`,
       component: path.resolve(`./src/templates/projekt.tsx`),
       context: {
-        project: node,
+        id,
       },
     })
   })

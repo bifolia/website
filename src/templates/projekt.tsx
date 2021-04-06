@@ -1,18 +1,22 @@
 import './projekt.scss'
 import { Page, Project } from '../types'
+import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
 import { Layout } from '../components/Layout'
-import { PageProps } from 'gatsby'
 import { SEO } from '../components/SEO'
 
-type Context = {
-  project: Project
+type Data = {
+  strapiProject: Project
 }
 
-const Projekt: FunctionComponent<PageProps<unknown, Context>> = ({
-  pageContext: {
-    project: { description, name, body },
+type Context = {
+  id: string
+}
+
+const Projekt: FunctionComponent<PageProps<Data, Context>> = ({
+  data: {
+    strapiProject: { description, name, body },
   },
 }) => (
   <Layout page={Page.Projekte}>
@@ -23,3 +27,40 @@ const Projekt: FunctionComponent<PageProps<unknown, Context>> = ({
 )
 
 export default Projekt
+
+export const query = graphql`
+  query Projekt($id: String) {
+    strapiProject(id: { eq: $id }) {
+      name
+      description
+      body {
+        strapi_component
+        layout {
+          layout
+        }
+        content
+        is_large
+        caption
+        url
+        entries {
+          name
+          values {
+            value
+          }
+        }
+        source {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 3840
+                quality: 100
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+        }
+      }
+    }
+  }
+`
