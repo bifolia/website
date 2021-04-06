@@ -34,10 +34,12 @@ export const Header = ({ page }: Props) => {
     }
   }, [setPeek])
 
-  const [padLogo, setPadLogo] = useState(true)
+  const [padLogo, setPadLogo] = useState<boolean>()
+  const [padLogoTransition, setPadLogoTransition] = useState(false)
   useEffect(() => {
     const onResize = () => {
       setPadLogo(window.innerWidth >= BREAKPOINT && (expanded || peek))
+      setTimeout(() => setPadLogoTransition(true), 0)
     }
 
     onResize()
@@ -45,7 +47,7 @@ export const Header = ({ page }: Props) => {
     return () => {
       window.removeEventListener('resize', onResize)
     }
-  }, [expanded, peek, setPadLogo])
+  }, [expanded, peek, setPadLogo, setPadLogoTransition])
 
   const ref = useRef(null)
   useOnClickOutside(ref, collapse)
@@ -54,7 +56,12 @@ export const Header = ({ page }: Props) => {
     <header className={classNames('Header', { expanded, peek })}>
       <div className="Header__backdrop"></div>
 
-      <div className={classNames('Header__logo', { pad: padLogo })}>
+      <div
+        className={classNames('Header__logo', {
+          pad: padLogo,
+          transition: padLogoTransition,
+        })}
+      >
         <Link to="/">
           <Logo />
         </Link>
