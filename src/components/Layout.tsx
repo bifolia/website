@@ -1,5 +1,6 @@
 import './Layout.scss'
 import React, { FunctionComponent } from 'react'
+import { AnalyticsConsent } from './AnalyticsConsent'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { Page } from '../types'
@@ -16,6 +17,8 @@ export const Layout: FunctionComponent<Props> = ({
   children,
 }) => (
   <div className={classNames('Layout', className)}>
+    <AnalyticsConsent />
+
     <Header page={page} />
     <main>{children}</main>
     <Footer />

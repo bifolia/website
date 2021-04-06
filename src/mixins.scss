@@ -9,7 +9,8 @@
   background: $background;
   color: $color;
 
-  a {
+  a,
+  .link {
     color: $color;
   }
 }
@@ -81,7 +82,8 @@
 }
 
 @mixin link {
-  a {
+  a,
+  .link {
     text-decoration: underline;
     text-decoration-thickness: 0.05em;
     text-underline-offset: 0.15em;
