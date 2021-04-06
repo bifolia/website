@@ -10,9 +10,9 @@
   &__caption {
     color: lighten($color, 20);
     font-size: 0.8em;
-    margin-top: -1em;
-    padding-top: 0.4em;
-    transition: color $transition-duration ease-out;
+    opacity: 1;
+    padding-top: 0.8em;
+    transition: opacity $transition-duration ease-out;
   }
 
   a {
@@ -22,7 +22,7 @@
     &:focus,
     &:hover {
       .ImageComponent__caption {
-        color: lighten($color, 40);
+        opacity: 0.8;
       }
     }
   }

@@ -5,8 +5,18 @@
   @include sans-serif;
 
   font-size: 0.8em;
+  opacity: 1 !important;
+
+  &:active,
+  &:focus,
+  &:hover {
+    p {
+      opacity: 0.8;
+    }
+  }
 
   p {
     margin: 0;
+    transition: opacity $transition-duration ease-out;
   }
 }
