@@ -4,6 +4,10 @@
 .TableComponent {
   @include link;
 
+  @media screen and (min-width: $br-phone) {
+    font-size: 0.8em;
+  }
+
   &__row {
     border-bottom: 0.05em solid $color;
     display: grid;
