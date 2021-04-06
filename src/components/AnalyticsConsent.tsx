@@ -1,20 +1,16 @@
 import './AnalyticsConsent.scss'
 import React, { useCallback, useState } from 'react'
 import classNames from 'classnames'
-import { useCookies } from 'react-cookie'
 
-const COOKIE_NAME = 'allowedCookies'
+const KEY = 'allowedCookies'
 
 export const AnalyticsConsent = () => {
-  const [cookies, setCookie] = useCookies([])
-  const [active, setActive] = useState<boolean>(!cookies[COOKIE_NAME])
+  const [active, setActive] = useState(localStorage.getItem(KEY) !== 'true')
 
   const close = useCallback(() => {
-    setCookie(COOKIE_NAME, true, {
-      path: '/',
-    })
+    localStorage.setItem(KEY, 'true')
     setActive(false)
-  }, [setActive, setCookie])
+  }, [setActive])
 
   return (
     <div className={classNames('AnalyticsConsent', { active })}>
