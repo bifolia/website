@@ -1,11 +1,13 @@
 import './AnalyticsConsent.scss'
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import classNames from 'classnames'
 
 const KEY = 'allowedCookies'
 
 export const AnalyticsConsent = () => {
-  const [active, setActive] = useState(localStorage.getItem(KEY) !== 'true')
+  const [active, setActive] = useState(false)
+
+  useEffect(() => setActive(localStorage.getItem(KEY) !== 'true'), [setActive])
 
   const close = useCallback(() => {
     localStorage.setItem(KEY, 'true')
