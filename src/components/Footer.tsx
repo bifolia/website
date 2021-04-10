@@ -10,6 +10,7 @@ export const Footer = () => {
       email: string
       tel: string
       address: {
+        title: string
         line_1: string
         line_2: string | null
         code: number
@@ -23,10 +24,11 @@ export const Footer = () => {
         email
         tel
         address {
-          city
-          code
+          title
           line_1
           line_2
+          code
+          city
         }
         social {
           title
@@ -42,7 +44,7 @@ export const Footer = () => {
         © bifolia GbR {new Date().getFullYear()}
       </div>
       <div className="Footer__address">
-        <h4>bifolia</h4>
+        <h4>{address.title}</h4>
         <p>
           {address.line_1}
           <br />
