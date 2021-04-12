@@ -23,7 +23,7 @@
     "fix": "yarn prettier && yarn eslint --fix && yarn stylelint --fix"
   },
   "dependencies": {
-    "@types/react-helmet": "^6.1.0",
+    "@types/react-helmet": "^6.1.1",
     "classnames": "^2.3.1",
     "gatsby": "^3.2.1",
     "gatsby-plugin-gatsby-cloud": "^2.2.0",
