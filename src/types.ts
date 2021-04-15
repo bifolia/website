@@ -60,10 +60,14 @@ export type Text = {
 
 export type Component = Image | Table | Text
 
+type Author = {
+  name: string
+}
+
 export type JournalEntry = {
   title: string
   date: string
-  authors: { name: string }[] | null
+  authors: Author[] | null
   body: Component[]
 }
 
