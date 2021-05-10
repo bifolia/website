@@ -18,10 +18,10 @@ export const Header = ({ page }: Props) => {
   const [expanded, setExpanded] = useState(false)
 
   const collapse = useCallback(() => setExpanded(false), [setExpanded])
-  const toggle = useCallback(() => setExpanded(!expanded), [
-    expanded,
-    setExpanded,
-  ])
+  const toggle = useCallback(
+    () => setExpanded(!expanded),
+    [expanded, setExpanded],
+  )
 
   const [peek, setPeek] = useState(true)
   useEffect(() => {
