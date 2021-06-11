@@ -6231,10 +6231,10 @@ gatsby-page-utils@^1.7.1:
     lodash "^4.17.21"
     micromatch "^4.0.2"
 
-gatsby-plugin-gatsby-cloud@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-2.7.0.tgz#a351dabf14ae3a14e5d37288065d99d5ac1bbd46"
-  integrity sha512-k+OiKyr1wfJDn+G04hoOSUHJwJO7xNkoIu+g/YNofY2CVRYaXmWyS5dO+RGFG1uArgA6Tk4xB2A31ow7q2CZuQ==
+gatsby-plugin-gatsby-cloud@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-2.7.1.tgz#7febdd2de1fc203ecf2186a5b8e2bcc1631254f0"
+  integrity sha512-vpp/uHJnkygDlak1xSaopwI6tr3WfHlAXwb1ieMGJI173wPESEJrF17XMyNGUFAvh++srJbazzPc0mTeoQtArA==
   dependencies:
     "@babel/runtime" "^7.14.0"
     date-fns "^2.21.1"
@@ -6363,7 +6363,7 @@ gatsby-plugin-typescript@^3.7.1:
     "@babel/runtime" "^7.14.0"
     babel-plugin-remove-graphql-queries "^3.7.1"
 
-gatsby-plugin-utils@^1.7.0, gatsby-plugin-utils@^1.7.1:
+gatsby-plugin-utils@^1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-1.7.1.tgz#c38cacc857a02e5c15976cd7893f2ecec3a17732"
   integrity sha512-mZ6qDwTBheCXeUa9KBdeHTtwWzX4AyzqXrl3EVj3bWQzNFSvUMC5QJfySo1UnWBjYLdCUpe45ZeDg/85q52Cgg==
