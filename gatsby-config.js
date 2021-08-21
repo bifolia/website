@@ -14,7 +14,7 @@ module.exports = {
       resolve: 'gatsby-source-strapi',
       options: {
         apiURL: 'https://api.bifolia.de',
-        contentTypes: ['project', 'text'],
+        collectionTypes: ['project', 'text'],
         singleTypes: [
           'datenschutz',
           'footer',
