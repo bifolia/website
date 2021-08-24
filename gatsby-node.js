@@ -7,6 +7,24 @@ exports.createSchemaCustomization = ({ actions }) => {
       line_2: String
     }
 
+    type StrapiFooterSocial {
+      title: String!
+      url: String!
+    }
+
+    type StrapiFooter implements Node {
+      address: StrapiFooterAddress!
+      social: [StrapiFooterSocial]
+    }
+
+    type StrapiAuthor {
+      name: String!
+    }
+
+    type StrapiText implements Node {
+      authors: [StrapiAuthor]
+    }
+
     type StrapiBaseTableEntry {
       name: String!
       values: [StrapiBaseTableValue]
