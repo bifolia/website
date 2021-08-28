@@ -1,0 +1,2 @@
+(self.webpackChunkbifolia=self.webpackChunkbifolia||[]).push([[691],{8308:function(e,t,n){"use strict";n.r(t);var a=n(7294),i=n(789),r=n(6840),c=n(280);t.default=function(e){var t=e.data.strapiHomepage,n=t.description,l=t.body;return a.createElement(r.A,null,a.createElement(c.H,{title:"",description:n}),a.createElement(i.u,{components:l}))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-1f95d5d8bc7028fe9828.js.map

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-projekt-tsx",
+    "path": "/projekte/ein_naturgarten",
+    "result": {"data":{"strapiProject":{"name":"ein Naturgarten","description":"sdfsdf","body":[{"strapi_component":"base.table","layout":{"layout":"center"},"content":null,"is_large":null,"caption":null,"url":null,"entries":[{"name":"lkjlkj","values":[{"value":"lklkj"}]}],"source":null},{"strapi_component":"base.text","layout":{"layout":"center"},"content":"lklkj","is_large":false,"caption":null,"url":null,"entries":null,"source":null}]}},"pageContext":{"id":"Project_612a039d452eaa00163861c6"}},
+    "staticQueryHashes": ["1303214895"]}
