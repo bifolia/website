@@ -6042,10 +6042,10 @@ gatsby-plugin-gatsby-cloud@^3.0.0:
     lodash "^4.17.21"
     webpack-assets-manifest "^5.0.6"
 
-gatsby-plugin-google-gtag@^3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.12.0.tgz#a697034a4ee392b8f3f3b4fd728085efa4999b9a"
-  integrity sha512-tPk79choz1QUrOTPPYqhynPLzkemMdam072hmuZ4ke9rafC74WzYih7lbNKZJVGRJMeam0ca83M6GtbxChpD+w==
+gatsby-plugin-google-gtag@^3.13.0:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.13.0.tgz#150f0719ee7f692b5dc07900439763110cb86b17"
+  integrity sha512-J9O3U53Kc1v3S1YEdIHYm6TpM3KGkHGvPFg7DNkgqOBg2uHTdHYf/bO5hJUpen2k2BcQWSkIBElh2AIgmqSxIA==
   dependencies:
     "@babel/runtime" "^7.14.8"
     minimatch "^3.0.4"
@@ -6258,17 +6258,17 @@ gatsby-source-filesystem@2.5.0:
     valid-url "^1.0.9"
     xstate "^4.13.0"
 
-gatsby-source-filesystem@^3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.12.0.tgz#cbd3b0361570f1c612623c48b6d2f52459eb26e6"
-  integrity sha512-Rs++VHDiyop/yFiNnJhn4+ot3DRwzrjE5fNnrxScTGk0GT8wqcne/c3PFCcQcVOmnu01N2DL1BdPmQP/jF6xAw==
+gatsby-source-filesystem@^3.13.0:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.13.0.tgz#0c1ec7a02c692d36ab93e033661da1aa52cb6711"
+  integrity sha512-SR0OFKunE4OtsZ0E7kpX6kipQcbrw3jTfROuhqD6EJPM5hkTxeEI/6I2r/bUo4ZS1rpwrEYd3UF89Q0YdAhLqQ==
   dependencies:
     "@babel/runtime" "^7.14.8"
     better-queue "^3.8.10"
     chokidar "^3.4.3"
     file-type "^16.0.0"
     fs-extra "^8.1.0"
-    gatsby-core-utils "^2.12.0"
+    gatsby-core-utils "^2.13.0"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.5.2"
