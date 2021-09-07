@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-projekt-tsx",
     "path": "/projekte/ein_naturgarten",
-    "result": {"data":{"strapiProject":{"name":"ein Naturgarten","description":"sdfsdf","body":[{"strapi_component":"base.table","layout":{"position":null,"len":2},"content":null,"is_large":null,"caption":null,"url":null,"entries":[{"name":"lkjlkj","values":[{"value":"lklkj"}]}],"source":null},{"strapi_component":"base.text","layout":{"position":null,"len":2},"content":"lklkj","is_large":false,"caption":null,"url":null,"entries":null,"source":null}]}},"pageContext":{"id":"Project_612a039d452eaa00163861c6"}},
+    "result": {"data":{"strapiProject":{"name":"ein Naturgarten","description":"sdfsdf","body":[{"strapi_component":"base.table","layout":{"position":null,"len":2},"content":null,"is_large":null,"marginless":null,"caption":null,"url":null,"entries":[{"name":"lkjlkj","values":[{"value":"lklkj"}]}],"source":null},{"strapi_component":"base.text","layout":{"position":null,"len":2},"content":"lklkj","is_large":false,"marginless":false,"caption":null,"url":null,"entries":null,"source":null}]}},"pageContext":{"id":"Project_612a039d452eaa00163861c6"}},
     "staticQueryHashes": ["1303214895"]}
