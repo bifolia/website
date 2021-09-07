@@ -38,6 +38,7 @@ export const query = graphql`
         }
         content
         is_large
+        marginless
         caption
         url
         source {

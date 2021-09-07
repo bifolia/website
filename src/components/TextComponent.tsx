@@ -9,8 +9,8 @@ type Props = {
   text: Text
 }
 
-export const TextComponent = ({ text: { content, is_large } }: Props) => (
-  <div className={classNames('TextComponent', { large: is_large })}>
+export const TextComponent = ({ text: { content, is_large, marginless } }: Props) => (
+  <div className={classNames('TextComponent', { large: is_large, marginless })}>
     <ReactMarkdown plugins={[gfm]}>{content}</ReactMarkdown>
   </div>
 )

@@ -9,10 +9,23 @@
 
   @media screen and (min-width: $br-phone) {
     font-size: 0.8em;
+    margin: 1em 0;
+  }
+
+  @media screen and (min-width: $br-tablet) {
+    margin: 2em 0;
+  }
+
+  @media screen and (min-width: $br-laptop) {
+    margin: 3em 0;
   }
 
   @media screen and (min-width: $br-desktop) {
     column-count: 2;
+  }
+
+  &.marginless {
+    margin: 0;
   }
 
   &.large {

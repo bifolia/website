@@ -33,6 +33,7 @@ export const query = graphql`
         strapi_component
         content
         is_large
+        marginless
         caption
         url
         layout {

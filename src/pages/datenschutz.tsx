@@ -23,6 +23,7 @@ const Datenschutz: FunctionComponent<PageProps<Data>> = ({
       content,
       is_large: false,
       layout: { position: Position.SemiLeft, len: 2 },
+      marginless: false,
     },
   ]
 

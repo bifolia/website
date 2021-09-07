@@ -57,6 +57,7 @@ export type Text = {
   content: string
   is_large: boolean
   layout: Layout
+  marginless: boolean
 }
 
 export type Component = Image | Table | Text
