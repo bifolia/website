@@ -21,9 +21,14 @@ export const Body = ({ components }: Props) => (
 
       return (
         <div
-          className={classNames('Body__component', `position--${component.layout.position}`, `len--${component.layout.len}`, {
-            show: inView,
-          })}
+          className={classNames(
+            'Body__component',
+            `position--${component.layout.position}`,
+            `len--${component.layout.len}`,
+            {
+              show: inView,
+            },
+          )}
           key={i}
           ref={ref}
         >
