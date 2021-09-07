@@ -45,7 +45,8 @@ export const query = graphql`
           body {
             strapi_component
             layout {
-              layout
+              position
+              len
             }
             content
             is_large

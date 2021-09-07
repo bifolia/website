@@ -1,4 +1,4 @@
-import { Component, ComponentKind, LayoutKind } from '../types'
+import { Component, ComponentKind, Position } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
@@ -22,7 +22,7 @@ const Datenschutz: FunctionComponent<PageProps<Data>> = ({
       strapi_component: ComponentKind.Text,
       content,
       is_large: false,
-      layout: { layout: LayoutKind.Center },
+      layout: { position: Position.SemiLeft, len: 2 },
     },
   ]
 

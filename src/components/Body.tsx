@@ -21,7 +21,7 @@ export const Body = ({ components }: Props) => (
 
       return (
         <div
-          className={classNames('Body__component', component.layout.layout, {
+          className={classNames('Body__component', `position--${component.layout.position}`, `len--${component.layout.len}`, {
             show: inView,
           })}
           key={i}

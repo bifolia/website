@@ -9,21 +9,22 @@ export enum Page {
   Journal,
 }
 
-export enum LayoutKind {
-  Full = 'full',
+export enum Position {
   Left = 'left',
+  SemiLeft = 'semi_left',
+  SemiRight = 'semi_right',
   Right = 'right',
-  Center = 'center',
+}
+
+type Layout = {
+  position: Position
+  len: number
 }
 
 export enum ComponentKind {
   Image = 'base.image',
   Table = 'base.table',
   Text = 'base.text',
-}
-
-type Layout = {
-  layout: LayoutKind
 }
 
 export type Image = {

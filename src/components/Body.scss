@@ -17,20 +17,40 @@ $show-offset: 1em;
       top: 0;
     }
 
-    &.full {
-      @include layout-full;
+    &.position {
+      &--left {
+        @include position-left;
+      }
+
+      &--semi_left {
+        @include position-semileft;
+      }
+
+      &--semi_right {
+        @include position-semiright;
+      }
+
+      &--right {
+        @include position-right;
+      }
     }
 
-    &.left {
-      @include layout-left;
-    }
+    &.len {
+      &--1 {
+        @include len-1;
+      }
 
-    &.right {
-      @include layout-right;
-    }
+      &--2 {
+        @include len-2;
+      }
 
-    &.center {
-      @include layout-center;
+      &--3 {
+        @include len-3;
+      }
+
+      &--4 {
+        @include len-4;
+      }
     }
   }
 }

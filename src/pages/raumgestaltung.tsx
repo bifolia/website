@@ -36,7 +36,8 @@ export const query = graphql`
         caption
         url
         layout {
-          layout
+          position
+          len
         }
         source {
           localFile {
