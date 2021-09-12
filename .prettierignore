@@ -8,3 +8,5 @@
 .cache
 public
 node_modules
+
+.stylelintrc
