@@ -76,6 +76,10 @@
     grid-column-end: span 2;
     grid-column-start: 1;
   }
+
+  @media screen and (min-width: $br-laptop) {
+    grid-column-start: inherit;
+  }
 }
 
 @mixin len-3 {
