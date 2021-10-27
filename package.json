@@ -43,7 +43,7 @@
     "react-intersection-observer": "^8.32.2",
     "react-markdown": "^7.1.0",
     "remark-gfm": "^3.0.0",
-    "sass": "^1.43.3",
+    "sass": "^1.43.4",
     "typescript": "^4.4.4",
     "use-onclickoutside": "^0.4.0"
   },
