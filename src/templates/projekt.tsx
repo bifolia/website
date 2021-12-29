@@ -1,5 +1,5 @@
 import './projekt.scss'
-import { Page, Project } from '../types'
+import { Attributes, Page, Project } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
@@ -7,7 +7,7 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiProject: Project
+  strapiProject: Attributes<Project>
 }
 
 type Context = {
@@ -16,7 +16,7 @@ type Context = {
 
 const Projekt: FunctionComponent<PageProps<Data, Context>> = ({
   data: {
-    strapiProject: { description, name, body },
+    strapiProject: { data: { attributes: { description, name, body } } },
   },
 }) => (
   <Layout page={Page.Projekte}>
@@ -31,34 +31,38 @@ export default Projekt
 export const query = graphql`
   query Projekt($id: String) {
     strapiProject(id: { eq: $id }) {
-      name
-      description
-      body {
-        strapi_component
-        layout {
-          position
-          len
-        }
-        content
-        is_large
-        marginless
-        caption
-        url
-        entries {
+      data {
+        attributes {
           name
-          values {
-            value
-          }
-        }
-        source {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                width: 3840
-                quality: 100
-                placeholder: BLURRED
-                formats: [AUTO, WEBP]
-              )
+          description
+          body {
+            strapi_component
+            layout {
+              position
+              len
+            }
+            content
+            is_large
+            marginless
+            caption
+            url
+            entries {
+              name
+              values {
+                value
+              }
+            }
+            source {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 3840
+                    quality: 100
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP]
+                  )
+                }
+              }
             }
           }
         }

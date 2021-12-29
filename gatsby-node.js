@@ -59,7 +59,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       url: String
     }
 
-    type StrapiTeamBody {
+    type StrapiWirBody {
       caption: String
       url: String
     }
@@ -77,17 +77,21 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allStrapiProject {
+      allStrapiProjects {
         edges {
           node {
-            id
-            name
+            data {
+              id
+              attributes {
+                name
+              }
+            }
           }
         }
       }
     }
   `)
-  result.data.allStrapiProject.edges.forEach(({ node: { id, name } }) => {
+  result.data.allStrapiProjects.edges.forEach(({ node: { data: { id, attributes: { name } } } }) => {
     createPage({
       path: `projekte/${name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`,
       component: path.resolve(`./src/templates/projekt.tsx`),

@@ -1,5 +1,11 @@
 import { FileNode } from 'gatsby-plugin-image/dist/src/components/hooks'
 
+export type Attributes<T> = {
+  data: {
+    attributes: T
+  }
+}
+
 export enum Page {
   Raumgestaltung,
   Pflanzplanung,

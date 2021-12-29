@@ -1,3 +1,9 @@
+const entity = (name) => ({
+  name,
+  endpoint: `api/${name}`,
+  api: { qs: { populate: '*' } },
+})
+
 module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
@@ -14,19 +20,19 @@ module.exports = {
       resolve: 'gatsby-source-strapi',
       options: {
         apiURL: 'https://api.bifolia.de',
-        contentTypes: ['project', 'text'],
+        collectionTypes: [entity('projects'), entity('texts')],
         singleTypes: [
-          'datenschutz',
-          'footer',
-          'gartenentwicklung',
-          'homepage',
-          'journal',
-          'pflanzplanung',
-          'projekte',
-          'raumgestaltung',
-          'team',
+          entity('datenschutz'),
+          entity('footer'),
+          entity('gartenentwicklung'),
+          entity('homepage'),
+          entity('journal'),
+          entity('pflanzplanung'),
+          entity('projekte'),
+          entity('raumgestaltung'),
+          entity('wir'),
         ],
-        queryLimit: 1000,
+        // queryLimit: 1000,
       },
     },
     `gatsby-transformer-sharp`,
