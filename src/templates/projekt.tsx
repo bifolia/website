@@ -7,7 +7,7 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiProject: AllResult<Project>
+  strapiProjects: AllResult<Project>
 }
 
 type Context = {
@@ -16,7 +16,7 @@ type Context = {
 
 const Projekt: FunctionComponent<PageProps<Data, Context>> = ({
   data: {
-    strapiProject: { data: projects },
+    strapiProjects: { data: projects },
   },
   pageContext: { id },
 }) => {
