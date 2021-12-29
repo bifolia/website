@@ -1,7 +1,12 @@
 const entity = (name) => ({
   name,
   endpoint: `api/${name}`,
-  api: { qs: { populate: 'body.layout,body.source,address,social,cover' } },
+  api: {
+    qs: {
+      populate:
+        'body.layout,body.entries.values,body.source,address,social,cover',
+    },
+  },
 })
 
 module.exports = {
