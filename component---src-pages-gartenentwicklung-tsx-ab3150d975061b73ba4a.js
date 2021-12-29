@@ -1,2 +1,0 @@
-(self.webpackChunkbifolia=self.webpackChunkbifolia||[]).push([[542],{8138:function(e,t,n){"use strict";n.r(t);var a=n(7006),i=n(7294),r=n(789),c=n(6840),l=n(280);t.default=function(e){var t=e.data.strapiGartenentwicklung,n=t.description,u=t.body;return i.createElement(c.A,{page:a.T3.Gartenentwicklung},i.createElement(l.H,{title:"Gartenentwicklung",description:n}),i.createElement(r.u,{components:u}))}}}]);
-//# sourceMappingURL=component---src-pages-gartenentwicklung-tsx-ab3150d975061b73ba4a.js.map

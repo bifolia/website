@@ -1,2 +1,0 @@
-(self.webpackChunkbifolia=self.webpackChunkbifolia||[]).push([[727],{7535:function(e,t,a){"use strict";a.r(t);var n=a(7006),r=a(7294),c=a(789),i=a(6840),o=a(280);t.default=function(e){var t=e.data.strapiProject,a=t.description,l=t.name,s=t.body;return r.createElement(i.A,{page:n.T3.Projekte},r.createElement(o.H,{title:l,description:a}),r.createElement("h1",{className:"Projekt__name"},l),r.createElement(c.u,{components:s}))}}}]);
-//# sourceMappingURL=component---src-templates-projekt-tsx-4f9ffbb56cce81fcd3d6.js.map

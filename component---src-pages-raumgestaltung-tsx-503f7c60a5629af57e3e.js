@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbifolia=self.webpackChunkbifolia||[]).push([[426],{4961:function(t,e,a){a.r(e);var n=a(7006),u=a(7294),i=a(3124),r=a(6840),s=a(280);e.default=function(t){var e=t.data.strapiRaumgestaltung.data.attributes,a=e.description,l=e.body;return u.createElement(r.A,{page:n.T3.Raumgestaltung},u.createElement(s.H,{title:"Raumgestaltung",description:a}),u.createElement(i.u,{components:l}))}}}]);
+//# sourceMappingURL=component---src-pages-raumgestaltung-tsx-503f7c60a5629af57e3e.js.map
