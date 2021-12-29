@@ -75,9 +75,6 @@
   @media screen and (min-width: $br-phone) {
     grid-column-end: span 2;
   }
-
-  @media screen and (min-width: $br-laptop) {
-  }
 }
 
 @mixin len-3 {
