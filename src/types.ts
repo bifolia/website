@@ -93,10 +93,6 @@ export type JournalEntry = {
   body: Component[]
 }
 
-// export type Entries<T> = {
-//   edges: { node: T }[]
-// }
-
 export type Project = {
   description: string
   name: string
