@@ -1,9 +1,19 @@
 import { FileNode } from 'gatsby-plugin-image/dist/src/components/hooks'
 
-export type Attributes<T> = {
+export type Result<T> = {
   data: {
     attributes: T
   }
+}
+
+export type AllResult<T> = {
+  edges: {
+    node: {
+      data: {
+        attributes: T
+      }[]
+    }
+  }[]
 }
 
 export enum Page {
@@ -79,9 +89,9 @@ export type JournalEntry = {
   body: Component[]
 }
 
-export type Entries<T> = {
-  edges: { node: T }[]
-}
+// export type Entries<T> = {
+//   edges: { node: T }[]
+// }
 
 export type Project = {
   description: string

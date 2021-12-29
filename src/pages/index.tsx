@@ -2,12 +2,12 @@ import './index.scss'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
-import { Attributes, Component } from '../types'
+import { Component, Result } from '../types'
 import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiHomepage: Attributes<{
+  strapiHomepage: Result<{
     description: string
     body: Component[]
   }>

@@ -1,7 +1,7 @@
 const entity = (name) => ({
   name,
   endpoint: `api/${name}`,
-  api: { qs: { populate: '*' } },
+  api: { qs: { populate: 'body.layout,body.source' } },
 })
 
 module.exports = {
@@ -32,6 +32,7 @@ module.exports = {
           entity('raumgestaltung'),
           entity('wir'),
         ],
+        queryLimit: 1000,
       },
     },
     `gatsby-transformer-sharp`,

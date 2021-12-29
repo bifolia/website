@@ -1,5 +1,5 @@
 import './journal.scss'
-import { Attributes, Entries, JournalEntry, Page } from '../types'
+import { AllResult, JournalEntry, Page, Result } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { JournalEntryComponent } from '../components/JournalEntryComponent'
@@ -7,21 +7,21 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiJournal: Attributes<{
+  strapiJournal: Result<{
     description: string
   }>
-  allStrapiText: Entries<Attributes<JournalEntry>>
+  allStrapiTexts: AllResult<JournalEntry>
 }
 
 const Journal: FunctionComponent<PageProps<Data>> = ({
   data: {
     strapiJournal: { data: { attributes: { description } } },
-    allStrapiText: entries,
+    allStrapiTexts,
   },
 }) => (
   <Layout page={Page.Journal} className="Journal">
     <SEO title="Journal" description={description} />
-    {entries.edges.map(({ node: { data: { attributes } } }, i) => (
+    {allStrapiTexts.edges[0].node.data.map(({ attributes }, i) => (
       <JournalEntryComponent entry={attributes} key={i} />
     ))}
   </Layout>
@@ -38,7 +38,7 @@ export const query = graphql`
         }
       }
     }
-    allStrapiText(sort: { fields: date, order: DESC }) {
+    allStrapiTexts(sort: { fields: date, order: DESC }) {
       edges {
         node {
           data {

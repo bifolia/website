@@ -1,5 +1,5 @@
 import './projekte.scss'
-import { Attributes, Entries, Page, ProjectPeek } from '../types'
+import { AllResult, Page, ProjectPeek, Result } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Layout } from '../components/Layout'
@@ -7,22 +7,22 @@ import { ProjectPeekComponent } from '../components/ProjectPeekComponent'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiProjekte: Attributes<{
+  strapiProjekte: Result<{
     description: string
   }>
-  allStrapiProject: Entries<Attributes<ProjectPeek>>
+  allStrapiProjects: AllResult<ProjectPeek>
 }
 
 const Projekte: FunctionComponent<PageProps<Data>> = ({
   data: {
     strapiProjekte: { data: { attributes: { description } } },
-    allStrapiProject: entries,
+    allStrapiProjects,
   },
 }) => (
   <Layout page={Page.Projekte}>
     <SEO title="Projekte" description={description} />
     <div className="Projekte__wrapper">
-      {entries.edges.map(({ node: { data: { attributes } } }, i) => (
+      {allStrapiProjects.edges[0].node.data.map(({ attributes }, i) => (
         <ProjectPeekComponent project={attributes} key={i} />
       ))}
     </div>

@@ -30,7 +30,7 @@ export default Projekt
 
 export const query = graphql`
   query Projekt($id: String) {
-    strapiProject(id: { eq: $id }) {
+    strapiProjects(id: { eq: $id }) {
       data {
         attributes {
           name
