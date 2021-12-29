@@ -11,7 +11,7 @@ type Data = {
 }
 
 type Context = {
-  id: string
+  id: number
 }
 
 const Projekt: FunctionComponent<PageProps<Data, Context>> = ({
@@ -33,8 +33,8 @@ const Projekt: FunctionComponent<PageProps<Data, Context>> = ({
 export default Projekt
 
 export const query = graphql`
-  query Projekt($id: String) {
-    strapiProjects(id: { eq: $id }) {
+  query Projekt($id: Int) {
+    strapiProjects(data: {elemMatch: {id: {eq: $id}}}) {
       data {
         attributes {
           name
