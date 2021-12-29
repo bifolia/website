@@ -7,12 +7,9 @@ export type Result<T> = {
 }
 
 export type AllResult<T> = {
-  edges: {
-    node: {
-      data: {
-        attributes: T
-      }[]
-    }
+  data: {
+    id: number
+    attributes: T
   }[]
 }
 
@@ -105,5 +102,5 @@ export type ProjectPeek = {
     localFile: FileNode
   }
   place: string
-  year: string
+  year: number
 }

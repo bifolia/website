@@ -1,5 +1,5 @@
 import './projekt.scss'
-import { Page, Project, Result } from '../types'
+import { AllResult, Page, Project } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
@@ -7,7 +7,7 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiProject: Result<Project>
+  strapiProject: AllResult<Project>
 }
 
 type Context = {
@@ -16,26 +16,30 @@ type Context = {
 
 const Projekt: FunctionComponent<PageProps<Data, Context>> = ({
   data: {
-    strapiProject: {
-      data: {
-        attributes: { description, name, body },
-      },
-    },
+    strapiProject: { data: projects },
   },
-}) => (
-  <Layout page={Page.Projekte}>
-    <SEO title={name} description={description} />
-    <h1 className="Projekt__name">{name}</h1>
-    <Body components={body} />
-  </Layout>
-)
+  pageContext: { id },
+}) => {
+  const {
+    attributes: { body, description, name },
+  } = projects.find((project) => id === project.id)!
+
+  return (
+    <Layout page={Page.Projekte}>
+      <SEO title={name} description={description} />
+      <h1 className="Projekt__name">{name}</h1>
+      <Body components={body} />
+    </Layout>
+  )
+}
 
 export default Projekt
 
 export const query = graphql`
-  query Projekt($id: Int) {
-    strapiProjects(data: {elemMatch: {id: {eq: $id}}}) {
+  {
+    strapiProjects {
       data {
+        id
         attributes {
           name
           description

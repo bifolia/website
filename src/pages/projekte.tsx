@@ -10,7 +10,7 @@ type Data = {
   strapiProjekte: Result<{
     description: string
   }>
-  allStrapiProjects: AllResult<ProjectPeek>
+  strapiProjects: AllResult<ProjectPeek>
 }
 
 const Projekte: FunctionComponent<PageProps<Data>> = ({
@@ -20,15 +20,17 @@ const Projekte: FunctionComponent<PageProps<Data>> = ({
         attributes: { description },
       },
     },
-    allStrapiProjects,
+    strapiProjects: { data: projects },
   },
 }) => (
   <Layout page={Page.Projekte}>
     <SEO title="Projekte" description={description} />
     <div className="Projekte__wrapper">
-      {allStrapiProjects.edges[0].node.data.map(({ attributes }, i) => (
-        <ProjectPeekComponent project={attributes} key={i} />
-      ))}
+      {projects
+        .sort((a, b) => a.attributes.year - b.attributes.year)
+        .map(({ attributes: project }, i) => (
+          <ProjectPeekComponent project={project} key={i} />
+        ))}
     </div>
   </Layout>
 )
@@ -44,27 +46,23 @@ export const query = graphql`
         }
       }
     }
-    allStrapiProjects(sort: { fields: data___attributes___year, order: DESC }) {
-      edges {
-        node {
-          data {
-            attributes {
-              name
-              place
-              year
-              cover {
-                data {
-                  attributes {
-                    localFile {
-                      childImageSharp {
-                        gatsbyImageData(
-                          width: 3840
-                          quality: 100
-                          placeholder: BLURRED
-                          formats: [AUTO, WEBP]
-                        )
-                      }
-                    }
+    strapiProjects {
+      data {
+        attributes {
+          name
+          place
+          year
+          cover {
+            data {
+              attributes {
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData(
+                      width: 3840
+                      quality: 100
+                      placeholder: BLURRED
+                      formats: [AUTO, WEBP]
+                    )
                   }
                 }
               }

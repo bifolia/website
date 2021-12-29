@@ -80,29 +80,23 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allStrapiProjects {
-        edges {
-          node {
-            data {
-              id
-              attributes {
-                name
-              }
-            }
+      strapiProjects {
+        data {
+          id
+          attributes {
+            name
           }
         }
       }
     }
   `)
-  result.data.allStrapiProjects.edges[0].node.data.forEach(
-    ({ id, attributes: { name } }) => {
-      createPage({
-        path: `projekte/${name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`,
-        component: path.resolve(`./src/templates/projekt.tsx`),
-        context: {
-          id,
-        },
-      })
-    },
-  )
+  result.data.strapiProjects.data.forEach(({ id, attributes: { name } }) => {
+    createPage({
+      path: `projekte/${name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`,
+      component: path.resolve(`./src/templates/projekt.tsx`),
+      context: {
+        id,
+      },
+    })
+  })
 }
