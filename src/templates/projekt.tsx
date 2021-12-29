@@ -1,5 +1,5 @@
 import './projekt.scss'
-import { Attributes, Page, Project } from '../types'
+import { Page, Project, Result } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
@@ -7,7 +7,7 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiProject: Attributes<Project>
+  strapiProject: Result<Project>
 }
 
 type Context = {
@@ -53,14 +53,18 @@ export const query = graphql`
               }
             }
             source {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 3840
-                    quality: 100
-                    placeholder: BLURRED
-                    formats: [AUTO, WEBP]
-                  )
+              data {
+                attributes {
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData(
+                        width: 3840
+                        quality: 100
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP]
+                      )
+                    }
+                  }
                 }
               }
             }

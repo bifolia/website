@@ -46,7 +46,11 @@ export enum ComponentKind {
 export type Image = {
   strapi_component: ComponentKind.Image
   source: {
-    localFile: FileNode
+    data: {
+      attributes: {
+        localFile: FileNode
+      }
+    }
   }
   caption: string | null
   url: string | null

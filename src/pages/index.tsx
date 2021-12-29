@@ -44,14 +44,18 @@ export const query = graphql`
             caption
             url
             source {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 3840
-                    quality: 100
-                    placeholder: BLURRED
-                    formats: [AUTO, WEBP]
-                  )
+              data {
+                attributes {
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData(
+                        width: 3840
+                        quality: 100
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP]
+                      )
+                    }
+                  }
                 }
               }
             }

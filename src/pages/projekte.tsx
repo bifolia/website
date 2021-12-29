@@ -40,26 +40,30 @@ export const query = graphql`
         }
       }
     }
-    allStrapiProjects(sort: { fields: year, order: DESC }) {
+    allStrapiProjects(sort: { fields: data___attributes___year, order: DESC }) {
       edges {
         node {
           data {
             attributes {
               name
+              place
+              year
               cover {
-                localFile {
-                  childImageSharp {
-                    gatsbyImageData(
-                      width: 3840
-                      quality: 100
-                      placeholder: BLURRED
-                      formats: [AUTO, WEBP]
-                    )
+                data {
+                  attributes {
+                    localFile {
+                      childImageSharp {
+                        gatsbyImageData(
+                          width: 3840
+                          quality: 100
+                          placeholder: BLURRED
+                          formats: [AUTO, WEBP]
+                        )
+                      }
+                    }
                   }
                 }
               }
-              place
-              year
             }
           }
         }

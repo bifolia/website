@@ -21,7 +21,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       name: String!
     }
 
-    type StrapiTextDataAttributes {
+    type StrapiTextsDataAttributes {
       authors: [StrapiAuthorDataAttributes]
     }
 
@@ -68,7 +68,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       url: String
     }
 
-    type StrapiTextDataAttributesBody {
+    type StrapiTextsDataAttributesBody {
       caption: String
       url: String
     }
