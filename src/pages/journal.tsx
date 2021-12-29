@@ -15,7 +15,11 @@ type Data = {
 
 const Journal: FunctionComponent<PageProps<Data>> = ({
   data: {
-    strapiJournal: { data: { attributes: { description } } },
+    strapiJournal: {
+      data: {
+        attributes: { description },
+      },
+    },
     allStrapiTexts,
   },
 }) => (

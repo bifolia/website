@@ -14,7 +14,11 @@ type Data = {
 
 const Gartenentwicklung: FunctionComponent<PageProps<Data>> = ({
   data: {
-    strapiGartenentwicklung: { data: { attributes: { description, body } } },
+    strapiGartenentwicklung: {
+      data: {
+        attributes: { description, body },
+      },
+    },
   },
 }) => (
   <Layout page={Page.Gartenentwicklung}>

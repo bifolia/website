@@ -14,7 +14,11 @@ type Data = {
 
 const Wir: FunctionComponent<PageProps<Data>> = ({
   data: {
-    strapiWir: { data: { attributes: { description, body } } },
+    strapiWir: {
+      data: {
+        attributes: { description, body },
+      },
+    },
   },
 }) => (
   <Layout page={Page.Wir}>

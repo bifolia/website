@@ -4,7 +4,11 @@ import React from 'react'
 
 export const Footer = () => {
   const {
-    strapiFooter: { data: { attributes: { email, tel, address, social } } },
+    strapiFooter: {
+      data: {
+        attributes: { email, tel, address, social },
+      },
+    },
   } = useStaticQuery<{
     strapiFooter: {
       data: {

@@ -14,7 +14,11 @@ type Data = {
 
 const Raumgestaltung: FunctionComponent<PageProps<Data>> = ({
   data: {
-    strapiRaumgestaltung: { data: { attributes: { description, body } } },
+    strapiRaumgestaltung: {
+      data: {
+        attributes: { description, body },
+      },
+    },
   },
 }) => (
   <Layout page={Page.Raumgestaltung}>

@@ -15,7 +15,11 @@ type Data = {
 
 const Projekte: FunctionComponent<PageProps<Data>> = ({
   data: {
-    strapiProjekte: { data: { attributes: { description } } },
+    strapiProjekte: {
+      data: {
+        attributes: { description },
+      },
+    },
     allStrapiProjects,
   },
 }) => (

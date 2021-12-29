@@ -16,7 +16,11 @@ type Context = {
 
 const Projekt: FunctionComponent<PageProps<Data, Context>> = ({
   data: {
-    strapiProject: { data: { attributes: { description, name, body } } },
+    strapiProject: {
+      data: {
+        attributes: { description, name, body },
+      },
+    },
   },
 }) => (
   <Layout page={Page.Projekte}>

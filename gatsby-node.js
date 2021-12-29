@@ -94,13 +94,15 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  result.data.allStrapiProjects.edges[0].node.data.forEach(({ id, attributes: { name } }) => {
-    createPage({
-      path: `projekte/${name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`,
-      component: path.resolve(`./src/templates/projekt.tsx`),
-      context: {
-        id,
-      },
-    })
-  })
+  result.data.allStrapiProjects.edges[0].node.data.forEach(
+    ({ id, attributes: { name } }) => {
+      createPage({
+        path: `projekte/${name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`,
+        component: path.resolve(`./src/templates/projekt.tsx`),
+        context: {
+          id,
+        },
+      })
+    },
+  )
 }
