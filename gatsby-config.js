@@ -32,7 +32,6 @@ module.exports = {
           entity('raumgestaltung'),
           entity('wir'),
         ],
-        // queryLimit: 1000,
       },
     },
     `gatsby-transformer-sharp`,
