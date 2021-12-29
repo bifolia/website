@@ -99,7 +99,11 @@ export type Project = {
 export type ProjectPeek = {
   name: string
   cover: {
-    localFile: FileNode
+    data: {
+      attributes: {
+        localFile: FileNode
+      }
+    }
   }
   place: string
   year: number

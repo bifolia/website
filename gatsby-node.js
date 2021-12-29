@@ -104,9 +104,7 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.onCreateWebpackConfig = ({ actions, stage, plugins }) => {
   if (stage === 'build-javascript' || stage === 'develop') {
     actions.setWebpackConfig({
-      plugins: [
-        plugins.provide({ process: 'process/browser' })
-      ]
+      plugins: [plugins.provide({ process: 'process/browser' })],
     })
   }
 }

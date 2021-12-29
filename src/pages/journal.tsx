@@ -28,8 +28,8 @@ const Journal: FunctionComponent<PageProps<Data>> = ({
     {entries
       .sort(
         (a, b) =>
-          new Date(a.attributes.date).getTime() -
-          new Date(b.attributes.date).getTime(),
+          new Date(b.attributes.date).getTime() -
+          new Date(a.attributes.date).getTime(),
       )
       .map(({ attributes: entry }, i) => (
         <JournalEntryComponent entry={entry} key={i} />

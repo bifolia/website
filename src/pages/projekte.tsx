@@ -27,7 +27,7 @@ const Projekte: FunctionComponent<PageProps<Data>> = ({
     <SEO title="Projekte" description={description} />
     <div className="Projekte__wrapper">
       {projects
-        .sort((a, b) => a.attributes.year - b.attributes.year)
+        .sort((a, b) => b.attributes.year - a.attributes.year)
         .map(({ attributes: project }, i) => (
           <ProjectPeekComponent project={project} key={i} />
         ))}
