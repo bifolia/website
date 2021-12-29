@@ -3,26 +3,26 @@ const path = require('path')
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
-    type StrapiFooterAddress {
+    type StrapiFooterDataAttributesAddress {
       line_2: String
     }
 
-    type StrapiFooterSocial {
+    type StrapiFooterDataAttributesSocial {
       title: String!
       url: String!
     }
 
-    type StrapiFooter implements Node {
-      address: StrapiFooterAddress!
-      social: [StrapiFooterSocial]
+    type StrapiFooterDataAttributes {
+      address: StrapiFooterDataAttributesAddress!
+      social: [StrapiFooterDataAttributesSocial]
     }
 
-    type StrapiAuthor {
+    type StrapiAuthorDataAttributes {
       name: String!
     }
 
-    type StrapiText implements Node {
-      authors: [StrapiAuthor]
+    type StrapiTextsDataAttributes {
+      authors: [StrapiAuthorDataAttributes]
     }
 
     type StrapiBaseTableEntry {
@@ -34,40 +34,43 @@ exports.createSchemaCustomization = ({ actions }) => {
       value: String!
     }
 
-    type StrapiGartenentwicklungBody {
+    type StrapiGartenentwicklungDataAttributesBody {
       caption: String
       url: String
     }
 
-    type StrapiHomepageBody {
+    type StrapiHomepageDataAttributesBody {
       caption: String
       url: String
     }
 
-    type StrapiPflanzplanungBody {
+    type StrapiPflanzplanungDataAttributesBody {
       caption: String
       url: String
     }
 
-    type StrapiProjectBody {
-      caption: String
-      url: String
-    }
-
-    type StrapiRaumgestaltungBody {
-      caption: String
-      url: String
-    }
-
-    type StrapiTeamBody {
-      caption: String
-      url: String
-    }
-
-    type StrapiTextBody {
+    type StrapiProjectsDataAttributesBody {
       caption: String
       url: String
       entries: [StrapiBaseTableEntry]
+      content: String
+      is_large: Boolean
+      marginless: Boolean
+    }
+
+    type StrapiRaumgestaltungDataAttributesBody {
+      caption: String
+      url: String
+    }
+
+    type StrapiWirDataAttributesBody {
+      caption: String
+      url: String
+    }
+
+    type StrapiTextsDataAttributesBody {
+      caption: String
+      url: String
     }
   `
   createTypes(typeDefs)
@@ -77,17 +80,17 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allStrapiProject {
-        edges {
-          node {
-            id
+      strapiProjects {
+        data {
+          id
+          attributes {
             name
           }
         }
       }
     }
   `)
-  result.data.allStrapiProject.edges.forEach(({ node: { id, name } }) => {
+  result.data.strapiProjects.data.forEach(({ id, attributes: { name } }) => {
     createPage({
       path: `projekte/${name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`,
       component: path.resolve(`./src/templates/projekt.tsx`),
@@ -96,4 +99,12 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+}
+
+exports.onCreateWebpackConfig = ({ actions, stage, plugins }) => {
+  if (stage === 'build-javascript' || stage === 'develop') {
+    actions.setWebpackConfig({
+      plugins: [plugins.provide({ process: 'process/browser' })],
+    })
+  }
 }

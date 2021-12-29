@@ -74,11 +74,6 @@
 
   @media screen and (min-width: $br-phone) {
     grid-column-end: span 2;
-    grid-column-start: 1;
-  }
-
-  @media screen and (min-width: $br-laptop) {
-    grid-column-start: inherit;
   }
 }
 
@@ -87,7 +82,6 @@
 
   @media screen and (min-width: $br-phone) {
     grid-column-end: span 2;
-    grid-column-start: 1;
   }
 
   @media screen and (min-width: $br-laptop) {
@@ -100,7 +94,6 @@
 
   @media screen and (min-width: $br-phone) {
     grid-column-end: span 2;
-    grid-column-start: 1;
   }
 
   @media screen and (min-width: $br-laptop) {

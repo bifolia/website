@@ -1,5 +1,5 @@
 import './journal.scss'
-import { Entries, JournalEntry, Page } from '../types'
+import { AllResult, JournalEntry, Page, Result } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { JournalEntryComponent } from '../components/JournalEntryComponent'
@@ -7,23 +7,33 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiJournal: {
+  strapiJournal: Result<{
     description: string
-  }
-  allStrapiText: Entries<JournalEntry>
+  }>
+  strapiTexts: AllResult<JournalEntry>
 }
 
 const Journal: FunctionComponent<PageProps<Data>> = ({
   data: {
-    strapiJournal: { description },
-    allStrapiText: entries,
+    strapiJournal: {
+      data: {
+        attributes: { description },
+      },
+    },
+    strapiTexts: { data: entries },
   },
 }) => (
   <Layout page={Page.Journal} className="Journal">
     <SEO title="Journal" description={description} />
-    {entries.edges.map(({ node }, i) => (
-      <JournalEntryComponent entry={node} key={i} />
-    ))}
+    {entries
+      .sort(
+        (a, b) =>
+          new Date(b.attributes.date).getTime() -
+          new Date(a.attributes.date).getTime(),
+      )
+      .map(({ attributes: entry }, i) => (
+        <JournalEntryComponent entry={entry} key={i} />
+      ))}
   </Layout>
 )
 
@@ -32,11 +42,15 @@ export default Journal
 export const query = graphql`
   {
     strapiJournal {
-      description
+      data {
+        attributes {
+          description
+        }
+      }
     }
-    allStrapiText(sort: { fields: date, order: DESC }) {
-      edges {
-        node {
+    strapiTexts {
+      data {
+        attributes {
           title
           date(formatString: "D. MMMM YYYY", locale: "de")
           authors {
@@ -53,21 +67,19 @@ export const query = graphql`
             marginless
             caption
             url
-            entries {
-              name
-              values {
-                value
-              }
-            }
             source {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 3840
-                    quality: 100
-                    placeholder: BLURRED
-                    formats: [AUTO, WEBP]
-                  )
+              data {
+                attributes {
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData(
+                        width: 3840
+                        quality: 100
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP]
+                      )
+                    }
+                  }
                 }
               }
             }

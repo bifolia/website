@@ -1,5 +1,5 @@
 import './projekte.scss'
-import { Entries, Page, ProjectPeek } from '../types'
+import { AllResult, Page, ProjectPeek, Result } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Layout } from '../components/Layout'
@@ -7,24 +7,30 @@ import { ProjectPeekComponent } from '../components/ProjectPeekComponent'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiProjekte: {
+  strapiProjekte: Result<{
     description: string
-  }
-  allStrapiProject: Entries<ProjectPeek>
+  }>
+  strapiProjects: AllResult<ProjectPeek>
 }
 
 const Projekte: FunctionComponent<PageProps<Data>> = ({
   data: {
-    strapiProjekte: { description },
-    allStrapiProject: entries,
+    strapiProjekte: {
+      data: {
+        attributes: { description },
+      },
+    },
+    strapiProjects: { data: projects },
   },
 }) => (
   <Layout page={Page.Projekte}>
     <SEO title="Projekte" description={description} />
     <div className="Projekte__wrapper">
-      {entries.edges.map(({ node }, i) => (
-        <ProjectPeekComponent project={node} key={i} />
-      ))}
+      {projects
+        .sort((a, b) => b.attributes.year - a.attributes.year)
+        .map(({ attributes: project }, i) => (
+          <ProjectPeekComponent project={project} key={i} />
+        ))}
     </div>
   </Layout>
 )
@@ -34,26 +40,34 @@ export default Projekte
 export const query = graphql`
   {
     strapiProjekte {
-      description
+      data {
+        attributes {
+          description
+        }
+      }
     }
-    allStrapiProject(sort: { fields: year, order: DESC }) {
-      edges {
-        node {
+    strapiProjects {
+      data {
+        attributes {
           name
+          place
+          year
           cover {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 3840
-                  quality: 100
-                  placeholder: BLURRED
-                  formats: [AUTO, WEBP]
-                )
+            data {
+              attributes {
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData(
+                      width: 3840
+                      quality: 100
+                      placeholder: BLURRED
+                      formats: [AUTO, WEBP]
+                    )
+                  }
+                }
               }
             }
           }
-          place
-          year(formatString: "YYYY")
         }
       }
     }

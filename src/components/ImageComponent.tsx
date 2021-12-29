@@ -11,7 +11,11 @@ export const ImageComponent = ({
   image: {
     caption,
     url,
-    source: { localFile },
+    source: {
+      data: {
+        attributes: { localFile },
+      },
+    },
   },
 }: Props) => {
   const imageData = getImage(localFile)
