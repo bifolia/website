@@ -1,10 +1,12 @@
 import './journal.scss'
+import 'moment/locale/de'
 import { AllResult, JournalEntry, Page, Result } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { JournalEntryComponent } from '../components/JournalEntryComponent'
 import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
+import moment from 'moment'
 
 type Data = {
   strapiJournal: Result<{
@@ -28,8 +30,8 @@ const Journal: FunctionComponent<PageProps<Data>> = ({
     {entries
       .sort(
         (a, b) =>
-          new Date(b.attributes.date).getTime() -
-          new Date(a.attributes.date).getTime(),
+          moment(b.attributes.date, 'D. MMMM YYYY', 'de').unix() -
+          moment(a.attributes.date, 'D. MMMM YYYY', 'de').unix(),
       )
       .map(({ attributes: entry }, i) => (
         <JournalEntryComponent entry={entry} key={i} />
