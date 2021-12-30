@@ -18,5 +18,9 @@
   p {
     margin: 0;
     transition: opacity $transition-duration ease-out;
+
+    &:first-of-type {
+      margin-top: 0.2em;
+    }
   }
 }
