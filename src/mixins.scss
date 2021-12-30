@@ -1,7 +1,7 @@
-@import './variables.scss';
+@import "./variables";
 
 @mixin sans-serif {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-weight: 500;
 }
 
