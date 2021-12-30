@@ -1,6 +1,6 @@
+@use "sass:color";
 @import "../mixins";
 @import "../variables";
-@use "sass:color";
 
 .ImageComponent {
   @include link;
@@ -9,7 +9,7 @@
   text-align: right;
 
   &__caption {
-    color: color.lighten($color, 20);
+    color: color.scale($color, $lightness: 20%);
     font-size: 0.8em;
     opacity: 1;
     padding-top: 0.8em;
