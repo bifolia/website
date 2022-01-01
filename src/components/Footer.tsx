@@ -79,7 +79,7 @@ export const Footer = () => {
           {address.code} {address.city}
           <br />
         </p>
-        {tax_id && <p>Steuernummer {tax_id}</p>}
+        {tax_id && <p>USt-IdNr. {tax_id}</p>}
       </div>
       <div className="Footer__contact">
         <h4>Kontakt</h4>
