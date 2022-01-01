@@ -5,6 +5,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     type StrapiFooterDataAttributesAddress {
       line_2: String
+      line_3: String
     }
 
     type StrapiFooterDataAttributesSocial {
@@ -14,6 +15,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type StrapiFooterDataAttributes {
       address: StrapiFooterDataAttributesAddress!
+      tax_id: String
       social: [StrapiFooterDataAttributesSocial]
     }
 
