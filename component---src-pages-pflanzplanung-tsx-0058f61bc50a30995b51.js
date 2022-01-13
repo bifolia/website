@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbifolia=self.webpackChunkbifolia||[]).push([[604],{8659:function(e,a,n){n.r(a);var t=n(7006),l=n(7294),i=n(8953),r=n(6840),u=n(280);a.default=function(e){var a=e.data.strapiPflanzplanung.data.attributes,n=a.description,c=a.body;return l.createElement(r.A,{page:t.T3.Pflanzplanung},l.createElement(u.H,{title:"Pflanzplanung",description:n}),l.createElement(i.u,{components:c}))}}}]);
-//# sourceMappingURL=component---src-pages-pflanzplanung-tsx-0058f61bc50a30995b51.js.map
