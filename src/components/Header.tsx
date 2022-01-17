@@ -100,19 +100,19 @@ export const Header = ({ page }: Props) => {
 
           <div className="Header__menu__wrapper__expanded">
             <Link
-              to="/wir"
-              className={classNames({ active: page === Page.Wir })}
-              onClick={collapse}
-            >
-              Wir
-            </Link>
-            <br />
-            <Link
               to="/projekte"
               className={classNames({ active: page === Page.Projekte })}
               onClick={collapse}
             >
               Projekte
+            </Link>
+            <br />
+            <Link
+              to="/wir"
+              className={classNames({ active: page === Page.Wir })}
+              onClick={collapse}
+            >
+              Wir
             </Link>
             <br />
             <Link

@@ -1,5 +1,5 @@
 import './Footer.scss'
-import { graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 
 export const Footer = () => {
@@ -58,6 +58,8 @@ export const Footer = () => {
     <footer className="Footer">
       <div className="Footer__copyright">
         © bifolia GbR {new Date().getFullYear()}
+        <br />
+        <Link to="/datenschutz">Datenschutz</Link>
       </div>
       <div className="Footer__address">
         <h4>{address.title}</h4>
