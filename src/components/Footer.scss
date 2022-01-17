@@ -21,8 +21,12 @@
 
   &__copyright {
     align-self: end;
-    color: rgba($background, 0.25);
+    color: rgba($background, 0.5);
     grid-area: copyright;
+
+    a {
+      color: rgba($background, 0.5);
+    }
   }
 
   &__address {
