@@ -57,9 +57,9 @@ export const Footer = () => {
   return (
     <footer className="Footer">
       <div className="Footer__copyright">
-        © bifolia GbR {new Date().getFullYear()}
-        <br />
         <Link to="/datenschutz">Datenschutz</Link>
+        <br />
+        © bifolia GbR {new Date().getFullYear()}
       </div>
       <div className="Footer__address">
         <h4>{address.title}</h4>
