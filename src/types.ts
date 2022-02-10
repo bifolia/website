@@ -14,12 +14,9 @@ export type AllResult<T> = {
 }
 
 export enum Page {
-  Raumgestaltung,
-  Pflanzplanung,
-  Gartenentwicklung,
-  Wir,
   Projekte,
-  Journal,
+  Philosophie,
+  Wir,
 }
 
 export enum Position {

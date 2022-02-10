@@ -24,7 +24,7 @@ type Data = {
 const Philosophie: FunctionComponent<PageProps<Data>> = ({
   data: { strapiRaumgestaltung, strapiPflanzplanung, strapiGartenentwicklung },
 }) => (
-  <Layout page={Page.Raumgestaltung} className="Philosophie">
+  <Layout page={Page.Philosophie} className="Philosophie">
     <SEO
       title="Philosophie"
       description={strapiRaumgestaltung.data.attributes.description}

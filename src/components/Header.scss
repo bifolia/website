@@ -33,7 +33,7 @@ $breakpoint: $br-tablet;
     z-index: $z-overlay;
 
     &.pad {
-      margin-top: 1.5em;
+      margin-top: 0.7em;
 
       .Header__logo__subtitle {
         opacity: 1;
@@ -91,6 +91,7 @@ $breakpoint: $br-tablet;
         width: 2em;
 
         @media screen and (min-width: $breakpoint) {
+          display: none;
           height: 1em;
           stroke-width: 2;
           width: 1em;

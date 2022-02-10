@@ -75,56 +75,29 @@ export const Header = ({ page }: Props) => {
 
         <div className="Header__menu__wrapper">
           <Link
-            to="/raumgestaltung"
-            className={classNames({ active: page === Page.Raumgestaltung })}
+            to="/projekte"
+            className={classNames({ active: page === Page.Projekte })}
             onClick={collapse}
           >
-            Raumgestaltung
+            Projekte
           </Link>
           <br />
           <Link
-            to="/pflanzplanung"
-            className={classNames({ active: page === Page.Pflanzplanung })}
+            to="/philosophie"
+            className={classNames({ active: page === Page.Philosophie })}
             onClick={collapse}
           >
-            Pflanzplanung
+            Philosophie
           </Link>
           <br />
           <Link
-            to="/gartenentwicklung"
-            className={classNames({ active: page === Page.Gartenentwicklung })}
+            to="/wir"
+            className={classNames({ active: page === Page.Wir })}
             onClick={collapse}
           >
-            Gartenentwicklung
+            Wir
           </Link>
           <br />
-
-          <div className="Header__menu__wrapper__expanded">
-            <Link
-              to="/projekte"
-              className={classNames({ active: page === Page.Projekte })}
-              onClick={collapse}
-            >
-              Projekte
-            </Link>
-            <br />
-            <Link
-              to="/wir"
-              className={classNames({ active: page === Page.Wir })}
-              onClick={collapse}
-            >
-              Wir
-            </Link>
-            <br />
-            <Link
-              to="/journal"
-              className={classNames({ active: page === Page.Journal })}
-              onClick={collapse}
-            >
-              Journal
-            </Link>
-            <br />
-          </div>
         </div>
       </div>
     </header>
