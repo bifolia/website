@@ -17,6 +17,7 @@ export enum Page {
   Projekte,
   Philosophie,
   Wir,
+  Journal,
 }
 
 export enum Position {
