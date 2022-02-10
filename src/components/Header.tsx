@@ -64,6 +64,7 @@ export const Header = ({ page }: Props) => {
       >
         <Link to="/">
           <Logo />
+          <p className="Header__logo__subtitle">Büro für Gartengestaltung</p>
         </Link>
       </div>
 

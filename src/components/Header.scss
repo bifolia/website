@@ -6,16 +6,12 @@ $breakpoint: $br-tablet;
 .Header {
   @include padding;
 
-  align-items: center;
+  align-items: initial;
   display: flex;
   justify-content: space-between;
   position: fixed;
   width: 100%;
   z-index: $z-overlay;
-
-  @media screen and (min-width: $breakpoint) {
-    align-items: initial;
-  }
 
   &__backdrop {
     backdrop-filter: none;
@@ -38,14 +34,37 @@ $breakpoint: $br-tablet;
 
     &.pad {
       margin-top: 1.5em;
+
+      .Header__logo__subtitle {
+        opacity: 1;
+        visibility: visible;
+      }
     }
 
     &.transition {
       transition-duration: $transition-duration;
+
+      .Header__logo__subtitle {
+        transition-delay: $transition-duration;
+        transition-duration: $transition-duration;
+      }
     }
 
     .Logo {
       height: 1.5em;
+    }
+
+    &__subtitle {
+      @include sans-serif;
+
+      font-size: 0.8em;
+      margin: 0;
+      transition: all 0s ease-in-out;
+
+      @media screen and (min-width: $breakpoint) {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
   }
 
