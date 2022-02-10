@@ -27,4 +27,12 @@
       }
     }
   }
+
+  & > .gatsby-image-wrapper {
+    width: 100%;
+
+    & > div {
+      max-width: none !important;
+    }
+  }
 }
