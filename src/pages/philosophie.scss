@@ -1,0 +1,28 @@
+@import "../mixins";
+@import "../variables";
+
+.Philosophie {
+  .Body {
+    margin-bottom: 5em;
+  }
+
+  &__Gartengedanken {
+    @include padding;
+
+    background: $secondary-footer-background;
+    margin: 0 - $gap;
+
+    p {
+      margin: 0;
+      text-align: center;
+    }
+
+    a {
+      font-weight: bold;
+    }
+  }
+
+  .Footer {
+    margin-top: 0;
+  }
+}
