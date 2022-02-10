@@ -46,10 +46,14 @@
 
   @media screen and (min-width: $br-phone) {
     grid-column-start: 2;
+
+    &.len--2 {
+      grid-column-start: 1;
+    }
   }
 
   @media screen and (min-width: $br-laptop) {
-    grid-column-start: 3;
+    grid-column-start: 3 !important;
   }
 }
 
