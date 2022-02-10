@@ -7,7 +7,7 @@ import { Page } from '../types'
 import classNames from 'classnames'
 import useOnClickOutside from 'use-onclickoutside'
 
-const BREAKPOINT = 1000
+const BREAKPOINT = 0
 const PEEK_THRESHOLD = 50
 
 type Props = {

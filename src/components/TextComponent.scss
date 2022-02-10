@@ -9,15 +9,11 @@
 
   @media screen and (min-width: $br-phone) {
     font-size: 0.8em;
-    margin: 1em 0;
+    margin: 0.5em 0;
   }
 
   @media screen and (min-width: $br-tablet) {
-    margin: 2em 0;
-  }
-
-  @media screen and (min-width: $br-laptop) {
-    margin: 3em 0;
+    margin: 1em 0;
   }
 
   @media screen and (min-width: $br-desktop) {

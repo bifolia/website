@@ -13,7 +13,6 @@ export const ProjectPeekComponent = ({
   project: {
     name,
     place,
-    year,
     cover: {
       data: {
         attributes: { localFile },
@@ -27,9 +26,8 @@ export const ProjectPeekComponent = ({
   return (
     <Link to={`/projekte/${urlSafe(name)}`} className="ProjectPeekComponent">
       {image}
-      <p>{name}</p>
       <p>
-        {place} | {year}
+        {name} | {place}
       </p>
     </Link>
   )
