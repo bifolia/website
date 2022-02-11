@@ -35,7 +35,7 @@
     "gatsby-plugin-sass": "5.7.0",
     "gatsby-plugin-sharp": "4.7.0",
     "gatsby-source-filesystem": "4.7.0",
-    "gatsby-source-strapi": "^1.0.0-alpha.0",
+    "gatsby-source-strapi": "^1.0.3",
     "gatsby-transformer-sharp": "4.7.0",
     "moment": "^2.29.1",
     "process": "^0.11.10",
