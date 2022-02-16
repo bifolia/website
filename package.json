@@ -25,7 +25,7 @@
   "dependencies": {
     "@types/react-helmet": "^6.1.5",
     "classnames": "^2.3.1",
-    "gatsby": "4.7.1",
+    "gatsby": "4.7.2",
     "gatsby-plugin-gatsby-cloud": "4.7.0",
     "gatsby-plugin-google-gtag": "4.7.0",
     "gatsby-plugin-image": "2.7.0",
