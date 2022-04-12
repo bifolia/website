@@ -3597,7 +3597,7 @@ babel-plugin-polyfill-regenerator@^0.2.2:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.2.2"
 
-babel-plugin-remove-graphql-queries@^4.11.1, babel-plugin-remove-graphql-queries@^4.9.1:
+babel-plugin-remove-graphql-queries@^4.11.1:
   version "4.11.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.11.1.tgz#6f107865e8c1a83807c4b48b2262f5e0e0ba537e"
   integrity sha512-Bqbeow4Xf+Vm4YhAucRGJjf9pNAXakSndYiLKfvef/W6mdtBh00SM8FMaX0U3rtR7ZUXV63RmIyOybVQ6SWCyg==
@@ -6421,7 +6421,7 @@ gatsby-core-utils@^2.7.1:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.11.1, gatsby-core-utils@^3.8.2, gatsby-core-utils@^3.9.1:
+gatsby-core-utils@^3.11.1, gatsby-core-utils@^3.8.2:
   version "3.11.1"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.11.1.tgz#ea87c1d3aa45c26c9ea32b8e8b029afe6a56f8c7"
   integrity sha512-Op9/uihtcsDLlZDfRsGJ1ya2mFx2YH9Zmx93bawElZ0YpIzKjCkNTp+I5i5UANxvs5I+Fljl0WHQRudMWg+fWA==
@@ -6603,10 +6603,10 @@ gatsby-plugin-react-helmet@5.11.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-sass@5.9.0:
-  version "5.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-5.9.0.tgz#bd1e392bda23e9f6519d9bf189f4b8d5daa25422"
-  integrity sha512-yxl6g9KXNriOfJQN3Ra1tZragPXq6bXYY8AsrzBfsuUkYUU75ReWVtFljVSXYp/7/tpA4mvXwniBcWqrNSdHnA==
+gatsby-plugin-sass@5.11.1:
+  version "5.11.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-5.11.1.tgz#82d204a5e7733d63e7ac0a9c86e319e79a71544f"
+  integrity sha512-FPj8UI70IOgTE5PkeyiX00ItOIxsv0RArEW3z3FI2muN66iWphuVwWj7H7SnebT4N8ap4SxLSF/xeBlh2rtl4A==
   dependencies:
     "@babel/runtime" "^7.15.4"
     resolve-url-loader "^3.1.4"
