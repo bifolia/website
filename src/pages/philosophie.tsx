@@ -1,6 +1,6 @@
 import './philosophie.scss'
 import { Component, Page, Result } from '../types'
-import { Link, PageProps, graphql } from 'gatsby'
+import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
 import { Layout } from '../components/Layout'
