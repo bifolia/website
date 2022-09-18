@@ -10,7 +10,8 @@
   left: 0;
   position: fixed;
   transform: translateY(100%);
-  transition: visibility 0s, transform $transition-duration ease-out;
+  transition: visibility 0s $transition-duration, transform $transition-duration ease-out;
+  visibility: hidden;
   width: 100%;
   z-index: $z-notification;
 
