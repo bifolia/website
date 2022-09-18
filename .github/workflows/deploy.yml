@@ -29,3 +29,4 @@ jobs:
         publish_branch: gh-pages
         publish_dir: ./public
         cname: bifolia.de
+    - uses: gautamkrishnar/keepalive-workflow@v1
