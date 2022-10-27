@@ -1,32 +1,35 @@
 @import "../variables";
 
 @font-face {
-  font-family: 'Inter';
+  font-family: Inter;
   font-weight: 500;
-  src: url('/fonts/Inter/static/Inter-Medium.ttf') format('truetype');
+  src: url("/fonts/Inter/static/Inter-Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Lora';
+  font-family: Lora;
   font-weight: 400;
-  src: url('/fonts/Lora/static/Lora-Regular.ttf') format('truetype');
+  src: url("/fonts/Lora/static/Lora-Regular.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: 'Lora';
+  font-family: Lora;
   font-weight: 700;
-  src: url('/fonts/Lora/static/Lora-Bold.ttf') format('truetype');
+  src: url("/fonts/Lora/static/Lora-Bold.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: 'Lora';
+  font-family: Lora;
   font-style: italic;
   font-weight: 400;
-  src: url('/fonts/Lora/static/Lora-Italic.ttf') format('truetype');
+  src: url("/fonts/Lora/static/Lora-Italic.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: 'Lora';
+  font-family: Lora;
   font-style: italic;
   font-weight: 700;
-  src: url('/fonts/Lora/static/Lora-BoldItalic.ttf') format('truetype');
+  src: url("/fonts/Lora/static/Lora-BoldItalic.ttf") format("truetype");
 }
 
 html {
