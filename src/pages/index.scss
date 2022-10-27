@@ -1,5 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "../variables";
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 500;
+  src: url('/fonts/Inter/static/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: 400;
+  src: url('/fonts/Lora/static/Lora-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-weight: 700;
+  src: url('/fonts/Lora/static/Lora-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/Lora/static/Lora-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/fonts/Lora/static/Lora-BoldItalic.ttf') format('truetype');
+}
 
 html {
   background: $background;
