@@ -10,7 +10,13 @@ type Props = {
 }
 
 export const TextComponent = ({
-  text: { content, is_large, marginless },
+  text: {
+    content: {
+      data: { content },
+    },
+    is_large,
+    marginless,
+  },
 }: Props) => (
   <div className={classNames('TextComponent', { large: is_large, marginless })}>
     <ReactMarkdown remarkPlugins={[gfm]}>{content}</ReactMarkdown>

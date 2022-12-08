@@ -4,52 +4,40 @@ import React from 'react'
 
 export const Footer = () => {
   const {
-    strapiFooter: {
-      data: {
-        attributes: { email, tel, address, tax_id, social },
-      },
-    },
+    strapiFooter: { email, tel, address, tax_id, social },
   } = useStaticQuery<{
     strapiFooter: {
-      data: {
-        attributes: {
-          email: string
-          tel: string
-          address: {
-            title: string
-            line_1: string
-            line_2: string | null
-            line_3: string | null
-            code: number
-            city: string
-          }
-          tax_id: string | null
-          social: { title: string; url: string }[] | null
-        }
+      email: string
+      tel: string
+      address: {
+        title: string
+        line_1: string
+        line_2: string | null
+        line_3: string | null
+        code: number
+        city: string
       }
+      tax_id: string | null
+      social: { title: string; url: string }[] | null
     }
   }>(graphql`
     {
       strapiFooter {
-        data {
-          attributes {
-            email
-            tel
-            address {
-              title
-              line_1
-              line_2
-              line_3
-              code
-              city
-            }
-            tax_id
-            social {
-              title
-              url
-            }
-          }
+        email
+        tel
+        address {
+          title
+          line_1
+          line_2
+          line_3
+          code
+          city
         }
+        tax_id
+        # social {
+        #   title
+        #   url
+        # }
       }
     }
   `)

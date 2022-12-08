@@ -1,4 +1,4 @@
-import { Component, ComponentKind, Position, Result } from '../types'
+import { Component, ComponentKind, Position } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
@@ -6,25 +6,21 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiDatenschutz: Result<{
+  strapiDatenschutz: {
     description: string
     content: string
-  }>
+  }
 }
 
 const Datenschutz: FunctionComponent<PageProps<Data>> = ({
   data: {
-    strapiDatenschutz: {
-      data: {
-        attributes: { description, content },
-      },
-    },
+    strapiDatenschutz: { description, content },
   },
 }) => {
   const body: Component[] = [
     {
       strapi_component: ComponentKind.Text,
-      content,
+      content: { data: { content } },
       is_large: false,
       layout: { position: Position.SemiLeft, len: 2 },
       marginless: false,
@@ -45,9 +41,9 @@ export default Datenschutz
 export const query = graphql`
   {
     strapiDatenschutz {
-      data {
-        attributes {
-          description
+      description
+      content {
+        data {
           content
         }
       }

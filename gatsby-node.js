@@ -82,17 +82,15 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      strapiProjects {
-        data {
+      allStrapiProject {
+        nodes {
           id
-          attributes {
-            name
-          }
+          name
         }
       }
     }
   `)
-  result.data.strapiProjects.data.forEach(({ id, attributes: { name } }) => {
+  result.data.allStrapiProject.nodes.forEach(({ id, name }) => {
     createPage({
       path: `projekte/${name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}`,
       component: path.resolve(`./src/templates/projekt.tsx`),

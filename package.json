@@ -7,7 +7,7 @@
   "homepage": "https://bifolia.de",
   "license": "MIT",
   "engines": {
-    "node": "18.4.0"
+    "node": "19.2.0"
   },
   "scripts": {
     "build": "gatsby build",
@@ -35,7 +35,7 @@
     "gatsby-plugin-sass": "6.2.0",
     "gatsby-plugin-sharp": "5.2.0",
     "gatsby-source-filesystem": "5.2.0",
-    "gatsby-source-strapi": "^1.0.3",
+    "gatsby-source-strapi": "^2.0.0",
     "gatsby-transformer-sharp": "5.2.0",
     "moment": "^2.29.4",
     "process": "^0.11.10",
