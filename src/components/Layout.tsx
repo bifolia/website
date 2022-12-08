@@ -1,5 +1,5 @@
 import './Layout.scss'
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, PropsWithChildren } from 'react'
 import { AnalyticsConsent } from './AnalyticsConsent'
 import { Footer } from './Footer'
 import { Header } from './Header'
@@ -11,7 +11,7 @@ type Props = {
   className?: string
 }
 
-export const Layout: FunctionComponent<Props> = ({
+export const Layout: FunctionComponent<PropsWithChildren<Props>> = ({
   page,
   className,
   children,
