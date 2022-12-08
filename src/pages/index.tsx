@@ -1,8 +1,8 @@
 import './index.scss'
-import { Component } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
+import { Component } from '../types'
 import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 

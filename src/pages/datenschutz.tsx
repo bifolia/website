@@ -14,9 +14,7 @@ type Data = {
 
 const Datenschutz: FunctionComponent<PageProps<Data>> = ({
   data: {
-    strapiDatenschutz: {
-      description, content,
-    },
+    strapiDatenschutz: { description, content },
   },
 }) => {
   const body: Component[] = [

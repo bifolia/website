@@ -25,10 +25,7 @@ const Philosophie: FunctionComponent<PageProps<Data>> = ({
   data: { strapiRaumgestaltung, strapiPflanzplanung, strapiGartenentwicklung },
 }) => (
   <Layout page={Page.Philosophie} className="Philosophie">
-    <SEO
-      title="Philosophie"
-      description={strapiRaumgestaltung.description}
-    />
+    <SEO title="Philosophie" description={strapiRaumgestaltung.description} />
 
     <Body components={strapiRaumgestaltung.body} />
     <Body components={strapiPflanzplanung.body} />

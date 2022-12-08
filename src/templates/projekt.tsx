@@ -20,8 +20,9 @@ const Projekt: FunctionComponent<PageProps<Data, Context>> = ({
   },
   pageContext: { id },
 }) => {
-  console.log(projects, id)
-  const { body, description, name } = projects.find((project) => id === project.id)!
+  const { body, description, name } = projects.find(
+    (project) => id === project.id,
+  )!
 
   return (
     <Layout page={Page.Projekte}>

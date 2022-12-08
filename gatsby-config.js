@@ -11,9 +11,9 @@ const body = {
       populate: {
         name: '*',
         values: '*',
-      }
+      },
     },
-  }
+  },
 }
 
 const entity = (singularName, attributes = {}) => ({
@@ -23,10 +23,11 @@ const entity = (singularName, attributes = {}) => ({
   },
 })
 
-const page = (singularName, attributes = {}) => entity(singularName, {
-  description: '*',
-  ...attributes,
-})
+const page = (singularName, attributes = {}) =>
+  entity(singularName, {
+    description: '*',
+    ...attributes,
+  })
 
 module.exports = {
   plugins: [
@@ -60,7 +61,7 @@ module.exports = {
             authors: {
               populate: {
                 name: '*',
-              }
+              },
             },
             body,
           }),

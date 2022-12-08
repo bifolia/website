@@ -13,9 +13,7 @@ export const ProjectPeekComponent = ({
   project: {
     name,
     place,
-    cover: {
-      localFile,
-    },
+    cover: { localFile },
   },
 }: Props) => {
   const imageData = getImage(localFile)
