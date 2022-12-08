@@ -1,12 +1,31 @@
-const entity = (name) => ({
-  name,
-  endpoint: `api/${name}`,
-  api: {
-    qs: {
-      populate:
-        'body.layout,body.entries.values,body.source,address,social,cover',
+const body = {
+  populate: {
+    layout: '*',
+    caption: '*',
+    url: '*',
+    source: '*',
+    is_large: '*',
+    marginless: '*',
+    content: '*',
+    entries: {
+      populate: {
+        name: '*',
+        values: '*',
+      }
     },
+  }
+}
+
+const entity = (singularName, attributes = {}) => ({
+  singularName,
+  queryParams: {
+    populate: attributes,
   },
+})
+
+const page = (singularName, attributes = {}) => entity(singularName, {
+  description: '*',
+  ...attributes,
 })
 
 module.exports = {
@@ -25,17 +44,43 @@ module.exports = {
       resolve: 'gatsby-source-strapi',
       options: {
         apiURL: 'https://api.bifolia.de',
-        collectionTypes: [entity('projects'), entity('texts')],
+        collectionTypes: [
+          entity('project', {
+            id: '*',
+            name: '*',
+            description: '*',
+            place: '*',
+            year: '*',
+            cover: '*',
+            body,
+          }),
+          entity('text', {
+            title: '*',
+            date: '*',
+            authors: {
+              populate: {
+                name: '*',
+              }
+            },
+            body,
+          }),
+        ],
         singleTypes: [
-          entity('datenschutz'),
-          entity('footer'),
-          entity('gartenentwicklung'),
-          entity('homepage'),
-          entity('journal'),
-          entity('pflanzplanung'),
-          entity('projekte'),
-          entity('raumgestaltung'),
-          entity('wir'),
+          page('datenschutz', { content: '*' }),
+          page('footer', {
+            email: '*',
+            tel: '*',
+            address: '*',
+            tax_id: '*',
+            social: '*',
+          }),
+          page('gartenentwicklung', { body }),
+          page('homepage', { body }),
+          page('journal'),
+          page('pflanzplanung', { body }),
+          page('projekte'),
+          page('raumgestaltung', { body }),
+          page('wir', { body }),
         ],
         queryLimit: 1000,
       },

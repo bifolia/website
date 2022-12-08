@@ -14,9 +14,7 @@ export const ProjectPeekComponent = ({
     name,
     place,
     cover: {
-      data: {
-        attributes: { localFile },
-      },
+      localFile,
     },
   },
 }: Props) => {

@@ -1,6 +1,6 @@
 import './journal.scss'
 import 'moment/locale/de'
-import { AllResult, JournalEntry, Page, Result } from '../types'
+import { JournalEntry, Page } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { JournalEntryComponent } from '../components/JournalEntryComponent'
@@ -9,20 +9,16 @@ import { SEO } from '../components/SEO'
 import moment from 'moment'
 
 type Data = {
-  strapiJournal: Result<{
+  strapiJournal: {
     description: string
-  }>
-  strapiTexts: AllResult<JournalEntry>
+  }
+  allStrapiText: { nodes: JournalEntry[] }
 }
 
 const Journal: FunctionComponent<PageProps<Data>> = ({
   data: {
-    strapiJournal: {
-      data: {
-        attributes: { description },
-      },
-    },
-    strapiTexts: { data: entries },
+    strapiJournal: { description },
+    allStrapiText: { nodes: entries },
   },
 }) => (
   <Layout page={Page.Journal} className="Journal">
@@ -30,10 +26,10 @@ const Journal: FunctionComponent<PageProps<Data>> = ({
     {entries
       .sort(
         (a, b) =>
-          moment(b.attributes.date, 'D. MMMM YYYY', 'de').unix() -
-          moment(a.attributes.date, 'D. MMMM YYYY', 'de').unix(),
+          moment(b.date, 'D. MMMM YYYY', 'de').unix() -
+          moment(a.date, 'D. MMMM YYYY', 'de').unix(),
       )
-      .map(({ attributes: entry }, i) => (
+      .map((entry, i) => (
         <JournalEntryComponent entry={entry} key={i} />
       ))}
   </Layout>
@@ -44,47 +40,50 @@ export default Journal
 export const query = graphql`
   {
     strapiJournal {
-      data {
-        attributes {
-          description
-        }
-      }
+      description
     }
-    strapiTexts {
-      data {
-        attributes {
-          title
-          date(formatString: "D. MMMM YYYY", locale: "de")
-          authors {
-            name
-          }
-          body {
+    allStrapiText {
+      nodes {
+        title
+        date(formatString: "D. MMMM YYYY", locale: "de")
+        authors {
+          name
+        }
+        body {
+          ... on STRAPI__COMPONENT_BASE_IMAGE {
             strapi_component
             layout {
               position
               len
             }
-            content
-            is_large
-            marginless
             caption
-            url
+            # url
             source {
-              data {
-                attributes {
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData(
-                        width: 1920
-                        quality: 100
-                        placeholder: BLURRED
-                        formats: [AUTO, WEBP]
-                      )
-                    }
-                  }
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 1920
+                    quality: 100
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP]
+                  )
                 }
               }
             }
+          }
+          ... on STRAPI__COMPONENT_BASE_TEXT {
+            strapi_component
+            layout {
+              position
+              len
+            }
+            content {
+              data {
+                content
+              }
+            }
+            is_large
+            marginless
           }
         }
       }

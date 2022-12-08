@@ -1,4 +1,4 @@
-import { Component, Page, Result } from '../types'
+import { Component, Page } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
@@ -6,19 +6,15 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiWir: Result<{
+  strapiWir: {
     description: string
     body: Component[]
-  }>
+  }
 }
 
 const Wir: FunctionComponent<PageProps<Data>> = ({
   data: {
-    strapiWir: {
-      data: {
-        attributes: { description, body },
-      },
-    },
+    strapiWir: { description, body },
   },
 }) => (
   <Layout page={Page.Wir}>
@@ -32,37 +28,42 @@ export default Wir
 export const query = graphql`
   {
     strapiWir {
-      data {
-        attributes {
-          description
-          body {
-            strapi_component
-            content
-            is_large
-            marginless
-            caption
-            url
-            layout {
-              position
-              len
-            }
-            source {
-              data {
-                attributes {
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData(
-                        width: 1920
-                        quality: 100
-                        placeholder: BLURRED
-                        formats: [AUTO, WEBP]
-                      )
-                    }
-                  }
-                }
+      description
+      body {
+        ... on STRAPI__COMPONENT_BASE_IMAGE {
+          strapi_component
+          layout {
+            position
+            len
+          }
+          caption
+          # url
+          source {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 1920
+                  quality: 100
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP]
+                )
               }
             }
           }
+        }
+        ... on STRAPI__COMPONENT_BASE_TEXT {
+          strapi_component
+          layout {
+            position
+            len
+          }
+          content {
+            data {
+              content
+            }
+          }
+          is_large
+          marginless
         }
       }
     }

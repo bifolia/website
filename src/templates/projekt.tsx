@@ -1,5 +1,5 @@
 import './projekt.scss'
-import { AllResult, Page, Project } from '../types'
+import { Page, Project } from '../types'
 import { PageProps, graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Body } from '../components/Body'
@@ -7,22 +7,21 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 type Data = {
-  strapiProjects: AllResult<Project>
+  allStrapiProject: { nodes: Project[] }
 }
 
 type Context = {
-  id: number
+  id: string
 }
 
 const Projekt: FunctionComponent<PageProps<Data, Context>> = ({
   data: {
-    strapiProjects: { data: projects },
+    allStrapiProject: { nodes: projects },
   },
   pageContext: { id },
 }) => {
-  const {
-    attributes: { body, description, name },
-  } = projects.find((project) => id === project.id)!
+  console.log(projects, id)
+  const { body, description, name } = projects.find((project) => id === project.id)!
 
   return (
     <Layout page={Page.Projekte}>
@@ -37,43 +36,57 @@ export default Projekt
 
 export const query = graphql`
   {
-    strapiProjects {
-      data {
+    allStrapiProject {
+      nodes {
         id
-        attributes {
-          name
-          description
-          body {
+        name
+        description
+        body {
+          ... on STRAPI__COMPONENT_BASE_IMAGE {
             strapi_component
             layout {
               position
               len
             }
-            content
+            caption
+            # url
+            source {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 1920
+                    quality: 100
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP]
+                  )
+                }
+              }
+            }
+          }
+          ... on STRAPI__COMPONENT_BASE_TEXT {
+            strapi_component
+            layout {
+              position
+              len
+            }
+            content {
+              data {
+                content
+              }
+            }
             is_large
             marginless
-            caption
-            url
+          }
+          ... on STRAPI__COMPONENT_BASE_TABLE {
+            strapi_component
+            layout {
+              position
+              len
+            }
             entries {
               name
               values {
                 value
-              }
-            }
-            source {
-              data {
-                attributes {
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData(
-                        width: 1920
-                        quality: 100
-                        placeholder: BLURRED
-                        formats: [AUTO, WEBP]
-                      )
-                    }
-                  }
-                }
               }
             }
           }

@@ -1,18 +1,5 @@
 import { FileNode } from 'gatsby-plugin-image/dist/src/components/hooks'
 
-export type Result<T> = {
-  data: {
-    attributes: T
-  }
-}
-
-export type AllResult<T> = {
-  data: {
-    id: number
-    attributes: T
-  }[]
-}
-
 export enum Page {
   Projekte,
   Philosophie,
@@ -41,11 +28,7 @@ export enum ComponentKind {
 export type Image = {
   strapi_component: ComponentKind.Image
   source: {
-    data: {
-      attributes: {
-        localFile: FileNode
-      }
-    }
+    localFile: FileNode
   }
   caption: string | null
   url: string | null
@@ -69,7 +52,11 @@ export type Table = {
 
 export type Text = {
   strapi_component: ComponentKind.Text
-  content: string
+  content: {
+    data: {
+      content: string
+    }
+  }
   is_large: boolean
   layout: Layout
   marginless: boolean
@@ -89,6 +76,7 @@ export type JournalEntry = {
 }
 
 export type Project = {
+  id: string
   description: string
   name: string
   body: Component[]
@@ -97,11 +85,7 @@ export type Project = {
 export type ProjectPeek = {
   name: string
   cover: {
-    data: {
-      attributes: {
-        localFile: FileNode
-      }
-    }
+    localFile: FileNode
   }
   place: string
   year: number
