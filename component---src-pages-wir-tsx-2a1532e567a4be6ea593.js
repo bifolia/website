@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbifolia=self.webpackChunkbifolia||[]).push([[297],{6370:function(e,t,i){i.r(t);var r=i(2787),a=i(7294),n=i(6472),c=i(5436),l=i(1470);t.default=e=>{let{data:{strapiWir:{description:t,body:i}}}=e;return a.createElement(c.A,{page:r.T3.Wir},a.createElement(l.H,{title:"Wir",description:t}),a.createElement(n.u,{components:i}))}}}]);
+//# sourceMappingURL=component---src-pages-wir-tsx-2a1532e567a4be6ea593.js.map

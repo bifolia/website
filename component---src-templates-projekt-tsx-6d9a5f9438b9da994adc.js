@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbifolia=self.webpackChunkbifolia||[]).push([[727],{3639:function(e,t,a){a.r(t);var n=a(2787),i=a(7294),r=a(6472),c=a(5436),l=a(1470);t.default=e=>{let{data:{allStrapiProject:{nodes:t}},pageContext:{id:a}}=e;const{body:o,description:s,name:d}=t.find((e=>a===e.id));return i.createElement(c.A,{page:n.T3.Projekte},i.createElement(l.H,{title:d,description:s}),i.createElement("h1",{className:"Projekt__name"},d),i.createElement(r.u,{components:o}))}}}]);
+//# sourceMappingURL=component---src-templates-projekt-tsx-6d9a5f9438b9da994adc.js.map

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbifolia=self.webpackChunkbifolia||[]).push([[691],{6817:function(e,t,a){a.r(t);var n=a(7294),i=a(8941),r=a(3884),c=a(1005);t.default=function(e){var t=e.data.strapiHomepage.data.attributes,a=t.description,l=t.body;return n.createElement(r.A,null,n.createElement(c.H,{title:"",description:a}),n.createElement(i.u,{components:l}))}}}]);
-//# sourceMappingURL=component---src-pages-index-tsx-6c5230629cf77f880470.js.map
