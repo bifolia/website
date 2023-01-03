@@ -2,8 +2,8 @@ import './Header.scss'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Arrow } from './Arrow'
 import { Link } from 'gatsby'
-import { Logo } from './Logo'
 import { Page } from '../types'
+import SVG from 'react-inlinesvg'
 import classNames from 'classnames'
 import useOnClickOutside from 'use-onclickoutside'
 
@@ -63,7 +63,7 @@ export const Header = ({ page }: Props) => {
         })}
       >
         <Link to="/">
-          <Logo />
+          <SVG src="./logo.svg" title="bifolia" />
           <p className="Header__logo__subtitle">Büro für Gartengestaltung</p>
         </Link>
       </div>

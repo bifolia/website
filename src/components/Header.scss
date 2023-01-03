@@ -56,8 +56,10 @@ $breakpoint: $br-tablet;
       }
     }
 
-    .Logo {
+    svg {
       height: 1.5em;
+      margin-bottom: 0;
+      width: auto;
     }
 
     &__subtitle {
