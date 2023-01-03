@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbifolia=self.webpackChunkbifolia||[]).push([[218],{2513:function(e,t,l){l.r(t);var i=l(5436),n=l(7294),a=l(1470);t.default=()=>n.createElement(i.A,null,n.createElement(a.H,{title:"",description:""}),n.createElement("div",{className:"NotFound__wrapper"},n.createElement("h1",null,"404"),n.createElement("p",null,"Diese Seite existiert leider nicht.")))}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-b6babfb5f0bbb6988146.js.map
